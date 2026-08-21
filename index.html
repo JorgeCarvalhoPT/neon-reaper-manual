@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="NEON REAPER field manual — how to play plus an icon reference for frames, weapons, fusions, passives, relics, the skill web and HELL mode.">
+<meta name="description" content="MACHINE DESCENT field manual — how to play plus an icon reference for frames, weapons, fusions, passives, relics, the skill web and HELL mode.">
 <meta name="color-scheme" content="dark light">
-<title>NEON REAPER Field Manual</title>
+<title>MACHINE DESCENT Field Manual</title>
 <style>
 :root{
   --bg:#eef1f6; --panel:#ffffff; --panel2:#f5f7fb; --line:#d9e0ea;
@@ -250,13 +250,13 @@ section h3{margin-top:26px}
 
 </head>
 <body>
-<header class="hud"><span class="brand"><b>NEON</b> REAPER</span>
+<header class="hud"><span class="brand"><b>MACHINE</b> DESCENT</span>
 <span class="tag">// Field Manual</span><span class="spacer"></span>
 <span class="meta mono"><span class="beat"></span>a bullet-heaven descent</span></header>
 <section class="hero" id="top"><div class="inner">
   <div>
     <p class="kick">Cyberpunk bullet-heaven · ten floors down</p>
-    <h1><span class="n">NEON</span> REAPER</h1>
+    <h1><span class="n">MACHINE</span> DESCENT</h1>
     <p class="lede">Your ghost, booted into a hijacked war-frame, cutting <b>ten floors straight down</b>
       through a dying arcology. Every floor is its own machine: its own horde, its own rule, and a
       <b>gate Warden</b> at the bottom that will not simply die. Kite, carve, level up, and descend —
@@ -271,7 +271,7 @@ section h3{margin-top:26px}
       <a class="cta ghost" href="#frames">Browse the frames</a>
     </div>
   </div>
-  <figure class="shot heroclip"><img src="media/gameplay.webp" alt="NEON REAPER gameplay — kiting a neon horde on HELL"><figcaption><span class="rec">● REC</span> in-engine capture · HELL — Thermal Tap</figcaption></figure>
+  <figure class="shot heroclip"><img src="media/gameplay.webp" alt="MACHINE DESCENT gameplay — kiting a neon horde on HELL"><figcaption><span class="rec">● REC</span> in-engine capture · HELL — Thermal Tap</figcaption></figure>
 </div></section><div class="wrap"><nav class="rail"><span class="lead">Contents</span>
 <a href="#top" data-acc="cy"><i></i>Overview</a>
 <a href="#play" data-acc="cy2"><i></i>How to Play</a>
@@ -698,7 +698,7 @@ section h3{margin-top:26px}
   <div class="ti"><img class="ic" src="icons/r_instruction.png" alt="" loading="lazy"></div>
   <div class="tc"><h4>THE FIRST INSTRUCTION <span class="tier t2">BLACK ICE</span></h4>
   <p><code>{&quot;level&quot;: 1.0, &quot;sdmg&quot;: 0.10}</code></p></div>
-</article></div></section><section id="web" data-acc="cy2"><div class="shead"><h2>The Skill Web</h2></div><p>NEON REAPER does not give each frame its own skill tree. Instead there is <strong>one shared lattice</strong> — a single large web of nodes that every frame can path through — plus a <strong>private "wing" bolted onto each frame's core</strong>. In <code>scripts/game.gd</code>, the whole board lives in the <code>SKILL_WEB</code> constant (nodes), <code>WEB_LINKS</code> (edges), and <code>WEB_CORES</code> (which node is which frame's root). There are <strong>115 nodes</strong> in total: <strong>73 shared</strong> (including the 6 cores) and <strong>42 wing nodes</strong> (6 wings × 7 nodes each).</p>
+</article></div></section><section id="web" data-acc="cy2"><div class="shead"><h2>The Skill Web</h2></div><p>MACHINE DESCENT does not give each frame its own skill tree. Instead there is <strong>one shared lattice</strong> — a single large web of nodes that every frame can path through — plus a <strong>private "wing" bolted onto each frame's core</strong>. In <code>scripts/game.gd</code>, the whole board lives in the <code>SKILL_WEB</code> constant (nodes), <code>WEB_LINKS</code> (edges), and <code>WEB_CORES</code> (which node is which frame's root). There are <strong>115 nodes</strong> in total: <strong>73 shared</strong> (including the 6 cores) and <strong>42 wing nodes</strong> (6 wings × 7 nodes each).</p>
 <h3>Frames and trees</h3>
 <p>There are <strong>6 frames</strong>, one per entry in <code>WEB_CORES</code>. Each has a free, pre-owned root node (cost 0) that anchors it to the lattice:</p>
 <div class="tw"><table class="wrap"><thead><tr><th>Frame key</th><th>Core node id</th><th>Core name</th></tr></thead><tbody><tr><td><code>scythe</code></td><td><code>core_scythe</code></td><td>SCYTHE // ATTRITION CORE</td></tr><tr><td><code>bulwark</code></td><td><code>core_bulwark</code></td><td>BULWARK // EMPLACEMENT CORE</td></tr><tr><td><code>havoc</code></td><td><code>core_havoc</code></td><td>HAVOC // ORDNANCE CORE</td></tr><tr><td><code>vector</code></td><td><code>core_vector</code></td><td>VECTOR // PURSUIT CORE</td></tr><tr><td><code>tempest</code></td><td><code>core_tempest</code></td><td>TEMPEST // VELOCITY CORE</td></tr><tr><td><code>courier</code></td><td><code>core_courier</code></td><td>COURIER // LOGISTICS CORE</td></tr></tbody></table></div>
