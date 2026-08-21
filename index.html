@@ -230,6 +230,23 @@ section h3{margin-top:26px}
   padding:9px 12px; border-top:1px solid var(--line); background:var(--panel)}
 .clip figcaption b{color:var(--hl)}
 </style>
+<style>
+/* Reference tables (skill web + HELL knobs): clean, wrapping, no sticky glitch */
+.tw{overflow-x:auto; border:1px solid var(--line); border-radius:10px; background:var(--panel);
+  box-shadow:var(--shadow); margin:14px 0 24px}
+.tw table{border-collapse:collapse; width:100%; min-width:0; font-size:13px; table-layout:auto}
+.tw thead th{position:static; text-align:left; background:var(--panel2); color:var(--mut);
+  font-family:ui-monospace,Menlo,monospace; font-size:10px; letter-spacing:.08em; text-transform:uppercase;
+  font-weight:600; padding:10px 12px; border-bottom:1px solid var(--line); white-space:normal; vertical-align:bottom}
+.tw tbody td{padding:9px 12px; border-top:1px solid var(--line); vertical-align:top; color:var(--ink);
+  white-space:normal; overflow-wrap:break-word; line-height:1.45; font-variant-numeric:tabular-nums}
+.tw tbody tr:nth-child(even){background:color-mix(in srgb, var(--panel2) 45%, transparent)}
+.tw tbody tr:hover{background:transparent}
+.tw td code{background:transparent; border:none; padding:0; color:var(--cy2); font-size:.92em; word-break:break-word}
+.tw td strong{color:var(--ink)}
+/* keep prose tables from touching the section edges */
+#web h3, #hell h3{margin-top:28px}
+</style>
 
 </head>
 <body>
@@ -303,12 +320,11 @@ section h3{margin-top:26px}
 
   <h3>The difficulty ladder</h3>
   <div class="ladder">
-    <div class="rung" style="--rc:var(--cy2)"><b>EASY</b><span>The default. Learn the floors and the frames with the pressure turned down.</span></div>
-    <div class="rung" style="--rc:var(--am)"><b>NORMAL</b><span>The baseline fight — the numbers the game is tuned around.</span></div>
-    <div class="rung" style="--rc:var(--mg)"><b>HARD</b><span>Tankier, faster, denser. Machines lunge when you get close.</span></div>
-    <div class="rung" style="--rc:var(--hl)"><b>HELL</b><span>Unlocked by taking <b>BLACK ICE CLEARANCE</b> on the web. Every floor runs its own live mechanic, the horde hits harder and denser, and the dead fire a parting shot. See the HELL section for exactly what each floor does.</span></div>
+    <div class="rung" style="--rc:var(--cy2)"><b>EASY</b><span><em>The default.</em> Enemies deal <b>0.6&times;</b> damage and carry <b>0.75&times;</b> health &mdash; room to learn the floors and the frames with the pressure turned down.</span></div>
+    <div class="rung" style="--rc:var(--am)"><b>NORMAL</b><span>The baseline the whole game is tuned around &mdash; <b>1.0&times;</b> across the board, no floor mechanics.</span></div>
+    <div class="rung" style="--rc:var(--mg)"><b>HARD</b><span>Enemies deal <b>1.25&times;</b> damage, carry <b>1.35&times;</b> health, spawn denser, and <b>lunge</b> the moment you get close. Still no floor mechanics.</span></div>
+    <div class="rung" style="--rc:var(--hl)"><b>HELL</b><span>Enemies deal <b>1.6&times;</b> damage, carry <b>1.7&times;</b> health, spawn denser still, and <b>fire a parting shot as they die</b> &mdash; and <b>every one of the ten floors runs its own live mechanic</b>. Unlocked by buying <b>BLACK ICE CLEARANCE</b> on the skill web. Full breakdown in the <a href="#hell">HELL</a> section.</span></div>
   </div>
-
   <h3>See it running</h3>
   <div class="gallery">
     <figure><img src="shot-foundry.png" alt="Cinder Foundries — floor seven, lava channels"><figcaption>z07 · CINDER FOUNDRIES — the channels run hot, then cool</figcaption></figure>
