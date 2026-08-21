@@ -6,24 +6,25 @@
 <meta name="description" content="MACHINE DESCENT field manual — how to play plus an icon reference for frames, weapons, fusions, passives, relics, the skill web and HELL mode.">
 <meta name="color-scheme" content="dark light">
 <title>MACHINE DESCENT Field Manual</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Chakra+Petch:wght@500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Chakra+Petch:wght@500;600&family=Press+Start+2P&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#f6f1ea; --panel:#fffdf9; --panel2:#f3ede4; --line:#e4d9c8;
-  --ink:#241a12; --mut:#6a5a49; --faint:#9a8a76;
-  --cy:#c25412; --cy2:#a86a12; --am:#b8791a; --am2:#a85f10; --vi:#7a3fd0; --mg:#c8306a; --hl:#d23a1c;
+  --bg:#eef1f6; --panel:#ffffff; --panel2:#f5f7fb; --line:#d9e0ea;
+  --ink:#18202e; --mut:#5b6678; --faint:#8994a6;
+  --cy:#0a8ba0; --cy2:#1c7fd6; --am:#b8791a; --am2:#a85f10; --vi:#6a45d9; --mg:#c8306a; --hl:#d23a1c;
   --shadow:0 1px 0 rgba(20,30,50,.04),0 8px 24px -18px rgba(20,30,50,.25);
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --bg:#0b0806; --panel:#16110c; --panel2:#1e1710; --line:#35291d;
-  --ink:#ecdfcd; --mut:#a2917c; --faint:#6f5f4d;
-  --cy:#ff8a2b; --cy2:#ffb14a; --am:#ffcf47; --am2:#ffab2e; --vi:#cf7bff; --mg:#ff4d84; --hl:#ff4a2a;
+  --bg:#080b11; --panel:#0f141d; --panel2:#141b26; --line:#232c3b;
+  --ink:#c9d4e3; --mut:#7f8da0; --faint:#586277;
+  --cy:#2fe4f3; --cy2:#42c8ff; --am:#ffcf47; --am2:#ffab2e; --vi:#ab88ff; --mg:#ff4d84; --hl:#ff5b3c;
   --shadow:0 0 0 1px rgba(0,0,0,.2),0 20px 40px -28px rgba(0,0,0,.8);
 }}
 :root[data-theme="dark"]{
-  --bg:#0b0806; --panel:#16110c; --panel2:#1e1710; --line:#35291d;
-  --ink:#ecdfcd; --mut:#a2917c; --faint:#6f5f4d;
-  --cy:#ff8a2b; --cy2:#ffb14a; --am:#ffcf47; --am2:#ffab2e; --vi:#cf7bff; --mg:#ff4d84; --hl:#ff4a2a;
+  --bg:#080b11; --panel:#0f141d; --panel2:#141b26; --line:#232c3b;
+  --ink:#c9d4e3; --mut:#7f8da0; --faint:#586277;
+  --cy:#2fe4f3; --cy2:#42c8ff; --am:#ffcf47; --am2:#ffab2e; --vi:#ab88ff; --mg:#ff4d84; --hl:#ff5b3c;
   --shadow:0 0 0 1px rgba(0,0,0,.2),0 20px 40px -28px rgba(0,0,0,.8);
 }
 *{box-sizing:border-box}
@@ -221,7 +222,7 @@ section h3{margin-top:26px}
 <style>
 .heroclip{margin:0; position:relative}
 .heroclip figcaption{position:absolute; left:0; right:0; bottom:0; display:flex; align-items:center; gap:8px;
-  font-family:ui-monospace,Menlo,monospace; font-size:10.5px; letter-spacing:.08em; color:#ffe9d0;
+  font-family:ui-monospace,Menlo,monospace; font-size:10.5px; letter-spacing:.08em; color:#cfe;
   padding:8px 12px; background:linear-gradient(transparent, rgba(0,0,0,.6));}
 .heroclip .rec{color:#ff5b5b; font-weight:700; letter-spacing:.1em}
 .clips{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:14px; margin:6px 0 26px}
@@ -300,13 +301,63 @@ body::after{content:""; position:fixed; inset:0; z-index:60; pointer-events:none
   text-transform:uppercase; margin-left:2px}
 </style>
 
+<style>
+.hud{align-items:center}
+.hudlogo{width:26px; height:26px; margin-right:9px; border-radius:6px;
+  filter:drop-shadow(0 0 6px color-mix(in srgb, var(--cy) 60%, transparent))}
+.herologo{width:88px; height:88px; display:block; margin:0 0 16px; border-radius:14px;
+  filter:drop-shadow(0 0 20px color-mix(in srgb, var(--cy) 45%, transparent))}
+@media (max-width:760px){ .herologo{width:72px; height:72px} }
+</style>
+<style>
+/* ============ 2D NEON ARCADE PASS ============ */
+.hud .brand{font-family:"Press Start 2P",ui-monospace,monospace; font-size:11px; letter-spacing:0}
+.rail a{font-family:"Press Start 2P",ui-monospace,monospace; font-size:8.5px; letter-spacing:0; line-height:1.5; padding:9px 8px}
+.rail .lead{font-family:"Press Start 2P",ui-monospace,monospace; font-size:7.5px}
+.hero .kick{font-family:"Press Start 2P",ui-monospace,monospace; font-size:8.5px; letter-spacing:.02em; color:var(--mg)}
+.chip{font-family:"Press Start 2P",ui-monospace,monospace; font-size:8px; letter-spacing:0; padding:7px 10px}
+
+/* the game is 2D pixel art — keep every screenshot/clip/icon crisp, never blurred */
+.heroclip img, .clip img, .gallery img, img.ic{image-rendering:pixelated}
+
+/* brighter neon tech-grid ground + a cyan horizon bloom up top */
+body{
+  background-color:var(--bg);
+  background-image:
+    radial-gradient(140% 60% at 50% 0%, color-mix(in srgb, var(--cy) 15%, transparent), transparent 60%),
+    linear-gradient(color-mix(in srgb, var(--cy) 10%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--cy) 10%, transparent) 1px, transparent 1px);
+  background-size:auto, 40px 40px, 40px 40px;
+  background-position:center top, center top, center top;
+  background-attachment:fixed, fixed, fixed;
+}
+
+/* neon panels: crisp edges with a faint bloom, lit brighter on hover */
+.tile{border-radius:4px; border-color:color-mix(in srgb, var(--cy) 24%, var(--line));
+  box-shadow:0 0 0 1px color-mix(in srgb, var(--cy) 7%, transparent), 0 6px 22px -16px #000}
+.tile:hover{border-color:color-mix(in srgb, var(--cy) 62%, transparent);
+  box-shadow:0 0 20px -6px color-mix(in srgb, var(--cy) 65%, transparent)}
+.tw{border-radius:5px; border-color:color-mix(in srgb, var(--cy) 22%, var(--line))}
+.cta{border-radius:4px}
+.cta.ghost{border-color:color-mix(in srgb, var(--cy) 45%, transparent)}
+
+/* section headers: stronger neon glow + a lit rule */
+section h2{text-shadow:0 0 10px color-mix(in srgb, var(--acc) 70%, transparent),
+  0 0 24px color-mix(in srgb, var(--acc) 38%, transparent)}
+section > .shead{border-bottom-color:color-mix(in srgb, var(--acc) 40%, var(--line))}
+
+/* CRT scanlines a touch stronger */
+body::after{opacity:.72}
+</style>
+
 </head>
 <body>
-<header class="hud"><span class="brand"><b>MACHINE</b> DESCENT</span>
+<header class="hud"><img class="hudlogo" src="logo.png" alt=""><span class="brand"><b>MACHINE</b> DESCENT</span>
 <span class="tag">// Field Manual</span><span class="spacer"></span>
 <span class="meta mono"><span class="beat"></span>a bullet-heaven descent</span></header>
 <section class="hero" id="top"><div class="inner">
   <div>
+    <img class="herologo" src="logo.png" alt="Machine Descent logo">
     <p class="kick">Cyberpunk bullet-heaven · ten floors down</p>
     <h1><span class="n">MACHINE</span> DESCENT</h1>
     <p class="lede">Your ghost, booted into a hijacked war-frame, cutting <b>ten floors straight down</b>
