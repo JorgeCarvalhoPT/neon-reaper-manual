@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="NEON REAPER field manual — how to play, the six frames, weapons, fusions, passives, relics, the skill web, and HELL mode.">
+<meta name="description" content="NEON REAPER field manual — how to play plus an icon reference for frames, weapons, fusions, passives, relics, the skill web and HELL mode.">
 <meta name="color-scheme" content="dark light">
 <title>NEON REAPER Field Manual</title>
 <style>
@@ -124,61 +124,61 @@ td strong{color:var(--acc)}
   .hud .tag{display:none}
 }
 </style>
-</head>
-<body>
-
 <style>
-/* ---- hero ---- */
-.hero{position:relative; overflow:hidden; border-bottom:1px solid var(--line);
-  background:radial-gradient(120% 140% at 80% -10%, color-mix(in srgb,var(--cy) 16%,transparent), transparent 60%), var(--panel);}
-.hero .inner{max-width:1180px; margin:0 auto; padding:clamp(34px,6vw,72px) clamp(16px,4vw,40px);
-  display:grid; grid-template-columns:1.05fr .95fr; gap:clamp(24px,4vw,54px); align-items:center;}
-.hero h1{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-weight:800;
-  font-size:clamp(38px,7vw,72px); line-height:.96; letter-spacing:.01em; margin:0 0 4px; color:var(--ink); text-wrap:balance;}
-.hero h1 .n{color:var(--cy); text-shadow:0 0 26px color-mix(in srgb,var(--cy) 55%,transparent);}
-.hero .kick{font-family:ui-monospace,Menlo,monospace; font-size:12px; letter-spacing:.34em; text-transform:uppercase;
-  color:var(--mg); margin:0 0 18px;}
-.hero .lede{font-size:clamp(15px,1.6vw,17px); color:var(--mut); max-width:52ch; margin:0 0 22px;}
-.hero .lede b{color:var(--ink)}
-.chips{display:flex; flex-wrap:wrap; gap:8px; margin:0 0 22px}
-.chip{font-family:ui-monospace,Menlo,monospace; font-size:11.5px; letter-spacing:.04em; color:var(--ink);
-  background:var(--panel2); border:1px solid var(--line); border-radius:999px; padding:6px 12px;}
-.chip b{color:var(--cy)}
-.hero .shot{border:1px solid var(--line); border-radius:14px; overflow:hidden; box-shadow:var(--shadow);
-  aspect-ratio:16/9; background:#05070c;}
-.hero .shot img{width:100%; height:100%; object-fit:cover; display:block}
-.cta{display:inline-flex; align-items:center; gap:9px; text-decoration:none;
-  font-family:ui-monospace,Menlo,monospace; font-size:13px; letter-spacing:.06em; font-weight:600;
-  color:#05070c; background:var(--cy); padding:11px 18px; border-radius:9px;}
-.cta.ghost{color:var(--ink); background:transparent; border:1px solid var(--line)}
-.cta:focus-visible{outline:2px solid var(--cy2); outline-offset:3px}
-.herobtns{display:flex; gap:10px; flex-wrap:wrap}
-
-/* ---- tutorial ---- */
-.tut .cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px; margin:0 0 26px}
-.card{background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:18px 18px 16px; box-shadow:var(--shadow)}
-.card .step{font-family:ui-monospace,Menlo,monospace; font-size:11px; letter-spacing:.14em; color:var(--acc); text-transform:uppercase}
-.card h4{font-family:ui-monospace,Menlo,monospace; margin:6px 0 7px; font-size:15px; color:var(--ink); letter-spacing:.02em}
-.card p{color:var(--mut); font-size:13.5px; margin:0; max-width:none}
-.keys{display:flex; flex-wrap:wrap; gap:8px; margin:2px 0 22px}
-.key{display:flex; align-items:baseline; gap:9px; background:var(--panel); border:1px solid var(--line);
-  border-radius:9px; padding:9px 13px}
-.key kbd{font-family:ui-monospace,Menlo,monospace; font-size:12px; font-weight:700; color:var(--cy);
-  background:var(--panel2); border:1px solid var(--line); border-bottom-width:2px; border-radius:6px; padding:3px 8px}
-.key span{font-size:13px; color:var(--mut)}
-.ladder{display:grid; gap:8px; margin:2px 0 22px}
-.rung{display:grid; grid-template-columns:96px 1fr; gap:14px; align-items:baseline;
-  border-left:3px solid var(--rc); padding:8px 0 8px 14px}
-.rung b{font-family:ui-monospace,Menlo,monospace; letter-spacing:.08em; color:var(--rc)}
-.rung span{color:var(--mut); font-size:13.5px}
-.gallery{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:6px 0 8px}
-.gallery figure{margin:0; border:1px solid var(--line); border-radius:12px; overflow:hidden; box-shadow:var(--shadow)}
-.gallery img{width:100%; display:block; aspect-ratio:16/9; object-fit:cover}
-.gallery figcaption{font-family:ui-monospace,Menlo,monospace; font-size:11px; letter-spacing:.05em;
-  color:var(--mut); padding:9px 12px; border-top:1px solid var(--line); background:var(--panel)}
-@media (max-width:760px){ .hero .inner{grid-template-columns:1fr} .hero .shot{order:-1} .gallery{grid-template-columns:1fr} }
+.note{color:var(--mut); font-size:13px; margin:-6px 0 20px; max-width:76ch}
+.tiles{display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:12px}
+.tiles.wide{grid-template-columns:repeat(auto-fill,minmax(370px,1fr))}
+.tile{display:grid; grid-template-columns:auto 1fr; gap:14px; background:var(--panel); border:1px solid var(--line);
+  border-radius:12px; padding:14px 16px; box-shadow:var(--shadow)}
+.tile.fus{grid-template-columns:1fr}
+.ti{align-self:start}
+img.ic{width:46px;height:46px;image-rendering:pixelated;image-rendering:crisp-edges;
+  background:var(--panel2); border:1px solid var(--line); border-radius:9px; padding:5px; display:block}
+img.ic.sm{width:34px;height:34px;padding:4px;border-radius:7px}
+.tc{min-width:0}
+.tc h4{font-family:ui-monospace,Menlo,monospace; font-size:14.5px; margin:0 0 8px; color:var(--ink); letter-spacing:.02em; text-wrap:balance}
+.tc .sub{font-family:system-ui,sans-serif; font-weight:400; color:var(--mut); font-size:12.5px; letter-spacing:0}
+.tc p{margin:6px 0 0; color:var(--mut); font-size:13px; max-width:none; line-height:1.5}
+.tc p strong,.tc p code{color:var(--ink)}
+.st{display:flex; flex-wrap:wrap; gap:6px; margin:0 0 4px}
+.st .s{font-family:ui-monospace,Menlo,monospace; font-size:11px; color:var(--ink); background:var(--panel2);
+  border:1px solid var(--line); border-radius:6px; padding:3px 8px; font-variant-numeric:tabular-nums}
+.st .s b{color:var(--acc); font-weight:700; margin-right:5px; letter-spacing:.04em}
+.recipe{display:flex; align-items:center; flex-wrap:wrap; gap:8px; margin:0 0 6px}
+.recipe .wn{font-family:ui-monospace,Menlo,monospace; font-size:12px; color:var(--mut)}
+.recipe .wn.res{color:var(--acc); font-weight:700; font-size:13.5px}
+.recipe .op{color:var(--faint); font-weight:700} .recipe .op.arr{color:var(--acc); font-size:16px}
+.fus p{color:var(--mut); font-size:13px; margin:6px 0 0}
+.fus .stats code{background:transparent;border:none;padding:0;color:var(--faint);font-size:11.5px;
+  font-family:ui-monospace,Menlo,monospace}
+.tier{font-family:ui-monospace,Menlo,monospace; font-size:9px; letter-spacing:.12em; padding:2px 7px; border-radius:5px; white-space:nowrap}
+.tier.t0{color:var(--mut); background:var(--panel2); border:1px solid var(--line)}
+.tier.t1{color:var(--cy); background:color-mix(in srgb,var(--cy) 14%,transparent); border:1px solid color-mix(in srgb,var(--cy) 40%,transparent)}
+.tier.t2{color:var(--am); background:color-mix(in srgb,var(--am) 15%,transparent); border:1px solid color-mix(in srgb,var(--am) 48%,transparent)}
+.tile.floor{border-left:3px solid var(--acc)}
+.tile.floor .qz{font-family:system-ui,sans-serif; font-weight:400; color:var(--acc); font-size:12px; display:block; margin-top:3px}
+.tile.floor .cad{font-family:ui-monospace,Menlo,monospace; font-size:11px; color:var(--faint); margin-top:8px}
+/* wrapping tables so nothing is cut */
+table.wrap{min-width:0}
+table.wrap th,table.wrap td{white-space:normal; word-break:normal}
+section h3{margin-top:26px}
+</style>
+<style>
+.heroclip{margin:0; position:relative}
+.heroclip figcaption{position:absolute; left:0; right:0; bottom:0; display:flex; align-items:center; gap:8px;
+  font-family:ui-monospace,Menlo,monospace; font-size:10.5px; letter-spacing:.08em; color:#cfe;
+  padding:8px 12px; background:linear-gradient(transparent, rgba(0,0,0,.6));}
+.heroclip .rec{color:#ff5b5b; font-weight:700; letter-spacing:.1em}
+.clips{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:14px; margin:6px 0 26px}
+.clip{margin:0; border:1px solid var(--line); border-radius:12px; overflow:hidden; background:#05070c; box-shadow:var(--shadow)}
+.clip img{width:100%; display:block; aspect-ratio:16/9; object-fit:cover; background:#05070c}
+.clip figcaption{font-family:ui-monospace,Menlo,monospace; font-size:11px; letter-spacing:.03em; color:var(--mut);
+  padding:9px 12px; border-top:1px solid var(--line); background:var(--panel)}
+.clip figcaption b{color:var(--hl)}
 </style>
 
+</head>
+<body>
 <header class="hud"><span class="brand"><b>NEON</b> REAPER</span>
 <span class="tag">// Field Manual</span><span class="spacer"></span>
 <span class="meta mono"><span class="beat"></span>a bullet-heaven descent</span></header>
@@ -200,9 +200,8 @@ td strong{color:var(--acc)}
       <a class="cta ghost" href="#frames">Browse the frames</a>
     </div>
   </div>
-  <div class="shot"><img src="hero.png" alt="NEON REAPER gameplay — the frame amid a neon horde on floor one"></div>
-</div></section>
-<div class="wrap"><nav class="rail"><span class="lead">Contents</span>
+  <figure class="shot heroclip"><img src="media/gameplay.webp" alt="NEON REAPER gameplay — kiting a neon horde on HELL"><figcaption><span class="rec">● REC</span> in-engine capture · HELL — Thermal Tap</figcaption></figure>
+</div></section><div class="wrap"><nav class="rail"><span class="lead">Contents</span>
 <a href="#top" data-acc="cy"><i></i>Overview</a>
 <a href="#play" data-acc="cy2"><i></i>How to Play</a>
 <a href="#frames" data-acc="cy"><i></i>Frames</a>
@@ -212,8 +211,7 @@ td strong{color:var(--acc)}
 <a href="#relics" data-acc="am2"><i></i>Relics</a>
 <a href="#web" data-acc="cy2"><i></i>Skill Web</a>
 <a href="#hell" data-acc="hl"><i></i>HELL</a></nav>
-<main><p class="intro">Everything below is pulled straight from the game build, so the numbers read the same as the game does. Jump in with <a href="#play">How to Play</a>, or dive into any system on the left.</p>
-<section id="play" data-acc="cy">
+<main><section id="play" data-acc="cy">
   <div class="shead"><h2>How to Play</h2></div>
   <p>Weapons fire on their own — your job is to <b>position</b>. Stay alive through each floor's horde until
   its gate Warden drops, then bring the Warden down to descend. Do it ten times.</p>
@@ -262,121 +260,467 @@ td strong{color:var(--acc)}
     <figure><img src="shot-foundry.png" alt="Cinder Foundries — floor seven, lava channels"><figcaption>z07 · CINDER FOUNDRIES — the channels run hot, then cool</figcaption></figure>
     <figure><img src="shot-boss.png" alt="A gate Warden mid-fight"><figcaption>A gate Warden — the floor is the fight</figcaption></figure>
   </div>
-</section>
-
-<section id="frames" data-acc="cy"><div class="shead"><h2>Playable War-Frames</h2></div>
-<p>NEON REAPER ships six playable "frames" — hijacked HALCYON chassis that MOTHER boots your ghost into. They are defined in the <code>CHARACTERS</code> array in <code>scripts/game.gd</code> (lines 17-63). Each frame is a distinct build identity: a fixed signature weapon, its own integrity/speed/damage profile, and its own origin node (CORE) at the root of the shared skill web.</p>
-<p>All numbers below are copied verbatim from the source. Movement speed in the data is a multiplier on <code>BASE_SPEED := 115.0</code> px/s (<code>scripts/player.gd:12</code>); the effective px/s is shown for convenience. Damage is a global weapon-damage multiplier (<code>weapons.base_damage_mult</code>). Self-repair (regen) is integrity restored per second.</p>
-<h3>Roster — identity &amp; base stats</h3>
-<div class="tw"><table><thead><tr><th>ID</th><th>Display name</th><th>Role / description</th><th>Integrity (HP)</th><th>Move speed</th><th>Damage</th><th>Self-repair</th><th>Unlock cost (CR)</th></tr></thead><tbody><tr><td><code>scythe</code></td><td>SCYTHE</td><td>assault frame</td><td>100.0</td><td>1.0× (115.0 px/s)</td><td>1.0×</td><td>0.5 /s</td><td>0 (default)</td></tr><tr><td><code>havoc</code></td><td>HAVOC</td><td>demolition frame</td><td>85.0</td><td>0.94× (108.1 px/s)</td><td>1.2×</td><td>0.0 /s</td><td>400</td></tr><tr><td><code>tempest</code></td><td>TEMPEST</td><td>blade frame</td><td>90.0</td><td>1.15× (132.25 px/s)</td><td>1.0×</td><td>0.0 /s</td><td>900</td></tr><tr><td><code>vector</code></td><td>VECTOR</td><td>pursuit frame</td><td>75.0</td><td>1.25× (143.75 px/s)</td><td>0.95×</td><td>0.0 /s</td><td>1500</td></tr><tr><td><code>bulwark</code></td><td>BULWARK</td><td>siege frame</td><td>140.0</td><td>0.85× (97.75 px/s)</td><td>1.1×</td><td>0.2 /s</td><td>2500</td></tr><tr><td><code>courier</code></td><td>THE COURIER</td><td>"the ghost, as she was"</td><td>85.0</td><td>1.1× (126.5 px/s)</td><td>1.05×</td><td>0.3 /s</td><td>0 (requires <code>byte</code> achievement)</td></tr></tbody></table></div>
-<h3>Signature weapon, skill-web CORE &amp; in-game blurb</h3>
-<div class="tw"><table><thead><tr><th>ID</th><th>Signature weapon (index)</th><th>Skill-web CORE node</th><th>In-game frame detail (verbatim)</th></tr></thead><tbody><tr><td><code>scythe</code></td><td>RIPPER SMG (weapon 0)</td><td><code>core_scythe</code> — "SCYTHE // ATTRITION CORE" (col 0, row 4)</td><td>RIPPER SMG · self-repair 0.5/s · 100 integrity</td></tr><tr><td><code>havoc</code></td><td>TESLA MINES (weapon 6)</td><td><code>core_havoc</code> — "HAVOC // ORDNANCE CORE" (col 10, row 1)</td><td>TESLA MINES · +20% damage · 85 integrity · slow</td></tr><tr><td><code>tempest</code></td><td>ARC BLADES (weapon 3)</td><td><code>core_tempest</code> — "TEMPEST // VELOCITY CORE" (col 10, row 7)</td><td>ARC BLADES · +15% move speed · 90 integrity</td></tr><tr><td><code>vector</code></td><td>PINBALL SLUG (weapon 15)</td><td><code>core_vector</code> — "VECTOR // PURSUIT CORE" (col 12, row 4)</td><td>PINBALL SLUG · +25% move speed · 75 integrity</td></tr><tr><td><code>bulwark</code></td><td>SENTRY POD (weapon 14)</td><td><code>core_bulwark</code> — "BULWARK // EMPLACEMENT CORE" (col 2, row 1)</td><td>SENTRY POD · 140 integrity · slow but stubborn</td></tr><tr><td><code>courier</code></td><td>ICEBREAKER (weapon 10)</td><td><code>core_courier</code> — "COURIER // LOGISTICS CORE" (col 2, row 7)</td><td>ICEBREAKER · BYTE remembers her</td></tr></tbody></table></div>
-<h3>Notes on the CORE nodes</h3>
-<p>Every <code>core_*</code> node in <code>SKILL_WEB</code> (game.gd:1106-1117) has <code>cost: 0</code>, class <code>minor</code>, and empty <code>hooks: {}</code> — it is purely the entry point of that frame's branch of the shared skill web and grants no stats on its own. The frame-specific passives (tagged <code>"only": "&lt;id&gt;"</code>, e.g. game.gd:1252-1347) hang off these cores and carry the actual bonuses:</p>
-<ul><li>SCYTHE // RIPPER SMG branch — sustained fire paid for in heat (<code>sdmg</code>/<code>scdr</code> nodes, ending in the <code>twinfeed</code> signature).</li><li>BULWARK // SENTRY POD branch — the gun outlives the frame that placed it (ends in <code>emplace</code>).</li><li>HAVOC // TESLA MINES branch — stand in the blast (ends in <code>cluster</code>).</li><li>VECTOR // PINBALL SLUG branch — one slug, every wall (ends in <code>chainshot</code>).</li><li>TEMPEST // ARC BLADES branch — more edge, less chassis (ends in <code>rend</code>).</li><li>THE COURIER // ICEBREAKER branch — the gun does no damage, so the wing buys the kill (ends in <code>conscript</code>).</li></ul></section>
-<section id="weapons" data-acc="am"><div class="shead"><h2>Weapons</h2></div>
-<p>NEON REAPER's arsenal is defined in <code>scripts/weapons.gd</code>. There are <strong>34 weapons total</strong>: 20 base skills (<code>W_*</code>) plus 14 fused skills (<code>F_*</code>, "FUSION PROTOCOL"). Each is one dictionary in the <code>WEAPONS</code> array, indexed by its enum value in declared order.</p>
-<p><strong>Global rules &amp; scaling</strong> (constants at top of file):</p>
-<ul><li><code>MAX_SLOTS = 4</code>, <code>MAX_WEAPON_LEVEL = 8</code>, <code>PASSIVE_MAX_RANK = 5</code>.</li><li><strong>Cooldown / fire interval</strong> per level: <code>interval × 0.93^(level−1) × cooldown_mult</code> (i.e. ~7% faster each level). Signature weapons additionally multiply by <code>sig_cdr</code>. Evolved weapons may apply a further multiplier (see Evolved column).</li><li><strong>Damage</strong> per level: <code>dmg × (1.0 + 0.3 × (level−1)) × damage_mult</code> (i.e. <strong>+30% base damage per level</strong>). Signature weapons additionally multiply by <code>sig_dmg</code>. Evolved weapons may apply a further multiplier.</li><li><code>damage_mult</code> / <code>cooldown_mult</code> are live values driven by Vault loadout, passives, and conditional skill nodes.</li></ul>
-<h3>Base weapons (W_*)</h3>
-<div class="tw"><table><thead><tr><th>#</th><th>Enum</th><th>Name</th><th>Interval (s)</th><th>Dmg</th><th>Behaviour / key numbers</th></tr></thead><tbody><tr><td>0</td><td><code>W_SMG</code></td><td>RIPPER SMG</td><td>0.45</td><td>8.0</td><td>Auto-targeting slugthrower. speed 430, pierce 1, size 3.0. Fires 1 shot, +1 at lvl 3, +1 at lvl 6. Range 380.</td></tr><tr><td>1</td><td><code>W_RAILGUN</code></td><td>RAILGUN</td><td>3.1</td><td>42.0</td><td>Hypervelocity piercing slug. speed 980, pierce 999, size 5.0. Range 520.</td></tr><tr><td>2</td><td><code>W_EMP</code></td><td>EMP PULSE</td><td>2.7</td><td>15.0</td><td>Radial shockburst. radius 85.0, grows ×1.08 per level.</td></tr><tr><td>3</td><td><code>W_ARC</code></td><td>ARC BLADES</td><td>999.0</td><td>10.0</td><td>Orbiting monofilament blades (never fires on cooldown; ticked as an orbit ring).</td></tr><tr><td>4</td><td><code>W_SWARM</code></td><td>NANO SWARM</td><td>1.4</td><td>7.0</td><td>Homing hunter darts. speed 250, pierce 1, size 2.5. 2 darts, +1 at lvl 4.</td></tr><tr><td>5</td><td><code>W_VIRUS</code></td><td>VIRUS UPLOAD</td><td>2.2</td><td>9.0</td><td>Infectious decay, spreads on kill. speed 300, pierce 1, size 3.0, decay dur 3.0s.</td></tr><tr><td>6</td><td><code>W_MINES</code></td><td>TESLA MINES</td><td>2.4</td><td>30.0</td><td>Proximity shock charges. aoe 55.0 (×1.05/lvl), size 4.0, mine life 10s.</td></tr><tr><td>7</td><td><code>W_ARCNET</code></td><td>ARC-NET</td><td>1.6</td><td>14.0</td><td>Chain lightning cascade. chains 4 (+level/3), range 210, damage falls ×0.88 per jump.</td></tr><tr><td>8</td><td><code>W_LANCE</code></td><td>SPECTRAL LANCE</td><td>0.12</td><td>4.5</td><td>Sweeping particle beam. length 240 (×1.04/lvl), sweeps 360°.</td></tr><tr><td>9</td><td><code>W_HALO</code></td><td>HALO DROP</td><td>3.2</td><td>55.0</td><td>Orbital saturation strike. radius 70 (×1.05/lvl), ~0.6s telegraph delay.</td></tr><tr><td>10</td><td><code>W_HACK</code></td><td>ICEBREAKER</td><td>3.4</td><td>6.0</td><td>Hacks machines to fight for you. speed 330, pierce 1, size 3.0. Ally cap 4 + level/2; convert dur (6.0 + level)s.</td></tr><tr><td>11</td><td><code>W_SHOTGUN</code></td><td>SCATTERCASTER</td><td>1.5</td><td>6.0</td><td>Close-range pellet storm. speed 390, pierce 1, size 2.2. 6 pellets (+level/3), spread arc 0.38. Range 240.</td></tr><tr><td>12</td><td><code>W_DISC</code></td><td>MONOFIL DISC</td><td>2.3</td><td>16.0</td><td>Returning shredder disc. speed 300, size 4.5, pierce 999, return time 0.55 + 0.05×level.</td></tr><tr><td>13</td><td><code>W_WELL</code></td><td>STASIS WELL</td><td>4.0</td><td>6.0</td><td>Field that drags machines to a crawl. radius 75 (×1.06/lvl), duration 3.0 + 0.2×level, dmg is dps.</td></tr><tr><td>14</td><td><code>W_TURRET</code></td><td>SENTRY POD</td><td>6.0</td><td>9.0</td><td>Deployable autonomous gun. size 3.0. 2 pods, fire rate 0.5s, pod life 8.0 + 0.5×level.</td></tr><tr><td>15</td><td><code>W_BOUNCE</code></td><td>PINBALL SLUG</td><td>1.8</td><td>18.0</td><td>Ricochets between machines. speed 420, size 3.5.</td></tr><tr><td>16</td><td><code>W_FLAK</code></td><td>FLAK CANNON</td><td>2.6</td><td>22.0</td><td>Lobbed shell, airbursts over the pack. speed 240, blast radius 46, frags 6 (each frag ×0.25 dmg), size 4.0.</td></tr><tr><td>17</td><td><code>W_CHAIN</code></td><td>TESLA COIL</td><td>1.15</td><td>12.0</td><td>Arc to nearest machine, then jumps. jumps 3, range 190.</td></tr><tr><td>18</td><td><code>W_CRYO</code></td><td>CRYO JET</td><td>0.55</td><td>5.0</td><td>Freezing cone, damages and slows. length 84.0.</td></tr><tr><td>19</td><td><code>W_ORBITAL</code></td><td>DEADEYE MARKER</td><td>3.4</td><td>70.0</td><td>Marks the toughest machine for orbital deletion. radius 34.0. Bystanders take half; mark rides target until the lance falls.</td></tr></tbody></table></div>
-<h3>Fused weapons (F_*)</h3>
-<p>Fusions are welded from two maxed skills (both installed and at <code>FUSION_LEVEL = 5</code>); the fusion consumes both parents and frees a slot.</p>
-<div class="tw"><table><thead><tr><th>#</th><th>Enum</th><th>Name</th><th>Interval (s)</th><th>Dmg</th><th>Behaviour / key numbers</th></tr></thead><tbody><tr><td>20</td><td><code>F_NOVA</code></td><td>NOVA LANCE</td><td>0.11</td><td>9.0</td><td>Held annihilation beam, slug on every pulse. length 340, speed 980, size 5.0. Hyperslug every 5th pulse.</td></tr><tr><td>21</td><td><code>F_PLAGUE</code></td><td>GREY PLAGUE</td><td>1.0</td><td>13.0</td><td>Homing contagion cloud, spreads on every kill. speed 280, size 3.2.</td></tr><tr><td>22</td><td><code>F_SINGULARITY</code></td><td>SINGULARITY</td><td>4.2</td><td>16.0</td><td>Collapsing well that pulses shockbursts. radius 95, detonates on a 0.7s beat.</td></tr><tr><td>23</td><td><code>F_CLUSTER</code></td><td>CLUSTER DOCTRINE</td><td>2.9</td><td>48.0</td><td>Orbital barrage that seeds live mines. radius 74, mine aoe 62, size 4.0. Mines deal ×0.55 dmg.</td></tr><tr><td>24</td><td><code>F_BUZZSAW</code></td><td>BUZZSAW HALO</td><td>1.5</td><td>15.0</td><td>Eight blades that fling shredder discs. speed 320, size 4.5. Ring grinds constantly AND throws discs.</td></tr><tr><td>25</td><td><code>F_HIVE</code></td><td>HIVE PROTOCOL</td><td>1.5</td><td>20.0</td><td>Cascade that converts what it kills. chains 7, range 240.</td></tr><tr><td>26</td><td><code>F_STORM</code></td><td>RICOCHET STORM</td><td>1.35</td><td>11.0</td><td>A wall of pellets, none of them stop. speed 400, size 2.6.</td></tr><tr><td>27</td><td><code>F_FACTORY</code></td><td>WAR FACTORY</td><td>4.5</td><td>13.0</td><td>Four pods, saturation fire, no downtime. size 3.0.</td></tr><tr><td>28</td><td><code>F_GLACIER</code></td><td>GLACIER</td><td>4.0</td><td>14.0</td><td>Vortex that drags them in and freezes them brittle. radius 92, deep-freeze chill 0.6, re-marks brittle on a 0.25s beat.</td></tr><tr><td>29</td><td><code>F_ARTILLERY</code></td><td>FIRE MISSION</td><td>4.2</td><td>26.0</td><td>Autonomous howitzer battery, airburst on call. blast radius 50, frags 6, size 3.0.</td></tr><tr><td>30</td><td><code>F_GRID</code></td><td>LIVE GRID</td><td>2.2</td><td>12.0</td><td>Electrified net, every anchor arcs to every other. range 260, net pulse every 0.3s, per-hit dmg ×0.55.</td></tr><tr><td>31</td><td><code>F_JUDGEMENT</code></td><td>JUDGEMENT</td><td>2.6</td><td>60.0</td><td>Every mark answered by an orbital railslug. radius 40, rail speed 980, railslug ×0.6 dmg.</td></tr><tr><td>32</td><td><code>F_SHRAPNEL</code></td><td>SHRAPNEL STORM</td><td>1.4</td><td>9.0</td><td>Ricochets that hit harder with every bounce. speed 410, size 2.6.</td></tr><tr><td>33</td><td><code>F_BEDLAM</code></td><td>BEDLAM</td><td>0.85</td><td>13.0</td><td>Thermal shock, alternating arc and freeze pulses. radius 110.</td></tr></tbody></table></div>
-<p><strong>Fusion recipes</strong> (<code>FUSIONS</code>, both parents at level 5):</p>
-<div class="tw"><table><thead><tr><th>Parent A</th><th>Parent B</th><th>Fuses into</th></tr></thead><tbody><tr><td>W_RAILGUN</td><td>W_LANCE</td><td>F_NOVA</td></tr><tr><td>W_VIRUS</td><td>W_SWARM</td><td>F_PLAGUE</td></tr><tr><td>W_EMP</td><td>W_WELL</td><td>F_SINGULARITY</td></tr><tr><td>W_MINES</td><td>W_HALO</td><td>F_CLUSTER</td></tr><tr><td>W_ARC</td><td>W_DISC</td><td>F_BUZZSAW</td></tr><tr><td>W_ARCNET</td><td>W_HACK</td><td>F_HIVE</td></tr><tr><td>W_SHOTGUN</td><td>W_BOUNCE</td><td>F_STORM</td></tr><tr><td>W_SMG</td><td>W_TURRET</td><td>F_FACTORY</td></tr><tr><td>W_CRYO</td><td>W_WELL</td><td>F_GLACIER</td></tr><tr><td>W_FLAK</td><td>W_TURRET</td><td>F_ARTILLERY</td></tr><tr><td>W_CHAIN</td><td>W_ARCNET</td><td>F_GRID</td></tr><tr><td>W_ORBITAL</td><td>W_RAILGUN</td><td>F_JUDGEMENT</td></tr><tr><td>W_SHOTGUN</td><td>W_BOUNCE</td><td>F_SHRAPNEL</td></tr><tr><td>W_CHAIN</td><td>W_CRYO</td><td>F_BEDLAM</td></tr></tbody></table></div>
-<p>&gt; Note: <code>W_SHOTGUN + W_BOUNCE</code> appears twice — mapping to both <code>F_STORM</code> and <code>F_SHRAPNEL</code>.</p>
-<h3>Overclock evolutions (EVOS)</h3>
-<p>Each base weapon has one evolved form, unlocked with the required passive (<code>req</code>). The last two columns show the interval/damage multipliers applied by <code>_interval()</code>/<code>_weapon_damage()</code> when evolved (blank = no multiplier for that stat).</p>
-<div class="tw"><table><thead><tr><th>Base</th><th>Evolved name</th><th>Req passive</th><th>Effect</th><th>×Interval</th><th>×Dmg</th></tr></thead><tbody><tr><td>W_SMG</td><td>HELLDRIVER</td><td>cdr</td><td>Sustained saturation fire (+2 shots, pierce 2)</td><td>×0.45</td><td>×0.85</td></tr><tr><td>W_RAILGUN</td><td>ORBITAL LANCE</td><td>dmg</td><td>Splash-piercing hyperslug (splash r 34)</td><td>×0.75</td><td>×2.0</td></tr><tr><td>W_EMP</td><td>BLACKOUT FIELD</td><td>mag</td><td>Constant shock aura, pulls shards (radius ×1.45)</td><td>=0.55</td><td>×0.35</td></tr><tr><td>W_ARC</td><td>CYCLONE PROTOCOL</td><td>spd</td><td>8-blade shredder ring</td><td>—</td><td>×1.6</td></tr><tr><td>W_SWARM</td><td>GREY GOO</td><td>rgn</td><td>Self-replicating hunter swarm (+1 dart, pierce 2)</td><td>×0.8</td><td>×1.3</td></tr><tr><td>W_VIRUS</td><td>PANDEMIC.EXE</td><td>hp</td><td>Virulent strain, longer decay (dur 4.0)</td><td>—</td><td>×2.0</td></tr><tr><td>W_MINES</td><td>DEAD ZONE</td><td>dmg</td><td>Double mines, wide blast (2 mines, aoe 80)</td><td>—</td><td>×1.5</td></tr><tr><td>W_ARCNET</td><td>TEMPEST GRID</td><td>cdr</td><td>Twin cascades, deeper chains (chains 8, ×2 cascades)</td><td>×0.7</td><td>—</td></tr><tr><td>W_LANCE</td><td>PRISM ARRAY</td><td>dmg</td><td>Opposed twin beams (2 beams, length 300)</td><td>—</td><td>×1.2</td></tr><tr><td>W_HALO</td><td>SATURATION BARRAGE</td><td>mag</td><td>Triple strike pattern (3 strikes)</td><td>×0.85</td><td>×1.4</td></tr><tr><td>W_HACK</td><td>BOTNET</td><td>rgn</td><td>Conversions become permanent (dur 1e9, +4 cap)</td><td>—</td><td>—</td></tr><tr><td>W_SHOTGUN</td><td>DRAGON'S BREATH</td><td>dmg</td><td>Wider, hotter, meaner (10 pellets, arc 0.55)</td><td>—</td><td>—</td></tr><tr><td>W_DISC</td><td>TWIN HELIX</td><td>spd</td><td>Opposed twin discs (2 discs)</td><td>—</td><td>—</td></tr><tr><td>W_WELL</td><td>EVENT HORIZON</td><td>mag</td><td>The well pulls them in (pull 2.2)</td><td>—</td><td>—</td></tr><tr><td>W_TURRET</td><td>BASTION ARRAY</td><td>cdr</td><td>Three pods, rapid cycle (3 pods, rate 0.32)</td><td>—</td><td>—</td></tr><tr><td>W_BOUNCE</td><td>PACHINKO PROTOCOL</td><td>hp</td><td>Eight bounces of bad news</td><td>—</td><td>—</td></tr><tr><td>W_FLAK</td><td>BLAST CURTAIN</td><td>area</td><td>Two shells, wider burst</td><td>×1.1</td><td>—</td></tr><tr><td>W_CHAIN</td><td>GRID SURGE</td><td>echo</td><td>Six jumps, every jump can fork</td><td>—</td><td>×1.15</td></tr><tr><td>W_CRYO</td><td>ABSOLUTE ZERO</td><td>dur</td><td>Deeper cone, brittle targets shatter</td><td>—</td><td>×1.2</td></tr><tr><td>W_ORBITAL</td><td>KILL FROM ABOVE</td><td>pierce</td><td>The lance cuts a line through the mark</td><td>—</td><td>×1.3</td></tr></tbody></table></div></section>
-<section id="fusions" data-acc="vi"><div class="shead"><h2>FUSION PROTOCOL — Weapon Combinations</h2></div>
-<p>FUSION PROTOCOL welds two maxed-out skills into a single, stronger fused skill. The recipes live in <code>FUSIONS</code> in <code>scripts/weapons.gd</code> (each entry is <code>{"a", "b", "into"}</code>), and every fused skill's stats come from the corresponding entry in the <code>WEAPONS</code> array.</p>
-<p><strong>Requirement:</strong> <code>const FUSION_LEVEL := 5</code>. Both parent weapons (<code>a</code> and <code>b</code>) must be installed <strong>and</strong> at level 5 or higher for the fusion to be offered (<code>available_fusions()</code> checks <code>lv.get(f.a) &gt;= FUSION_LEVEL and lv.get(f.b) &gt;= FUSION_LEVEL</code>). Performing the fusion consumes both parents and frees a slot. Fused skills are earned only via fusion — they are never offered as raw installs (<code>FIRST_FUSION := F_NOVA</code> marks the start of the fused-only range in the pool logic).</p>
-<h3>Recipes</h3>
-<div class="tw"><table><thead><tr><th>#</th><th>Recipe (A + B -&gt; RESULT)</th><th>Result description</th><th>Result key stats</th></tr></thead><tbody><tr><td>1</td><td>RAILGUN + SPECTRAL LANCE -&gt; <strong>NOVA LANCE</strong></td><td>held annihilation beam, slug on every pulse</td><td>interval 0.11, dmg 9.0, length 340.0, speed 980.0, size 5.0</td></tr><tr><td>2</td><td>VIRUS UPLOAD + NANO SWARM -&gt; <strong>GREY PLAGUE</strong></td><td>homing contagion cloud, spreads on every kill</td><td>interval 1.0, dmg 13.0, speed 280.0, size 3.2</td></tr><tr><td>3</td><td>EMP PULSE + STASIS WELL -&gt; <strong>SINGULARITY</strong></td><td>collapsing well that pulses shockbursts</td><td>interval 4.2, dmg 16.0, radius 95.0</td></tr><tr><td>4</td><td>TESLA MINES + HALO DROP -&gt; <strong>CLUSTER DOCTRINE</strong></td><td>orbital barrage that seeds live mines</td><td>interval 2.9, dmg 48.0, radius 74.0, aoe 62.0, size 4.0</td></tr><tr><td>5</td><td>ARC BLADES + MONOFIL DISC -&gt; <strong>BUZZSAW HALO</strong></td><td>eight blades that fling shredder discs</td><td>interval 1.5, dmg 15.0, speed 320.0, size 4.5</td></tr><tr><td>6</td><td>ARC-NET + ICEBREAKER -&gt; <strong>HIVE PROTOCOL</strong></td><td>cascade that converts what it kills</td><td>interval 1.5, dmg 20.0, chains 7, range 240.0</td></tr><tr><td>7</td><td>SCATTERCASTER + PINBALL SLUG -&gt; <strong>RICOCHET STORM</strong></td><td>a wall of pellets, none of them stop</td><td>interval 1.35, dmg 11.0, speed 400.0, size 2.6</td></tr><tr><td>8</td><td>RIPPER SMG + SENTRY POD -&gt; <strong>WAR FACTORY</strong></td><td>four pods, saturation fire, no downtime</td><td>interval 4.5, dmg 13.0, size 3.0</td></tr><tr><td>9</td><td>CRYO JET + STASIS WELL -&gt; <strong>GLACIER</strong></td><td>a vortex that drags them in and freezes them brittle</td><td>interval 4.0, dmg 14.0, radius 92.0</td></tr><tr><td>10</td><td>FLAK CANNON + SENTRY POD -&gt; <strong>FIRE MISSION</strong></td><td>autonomous howitzer battery, airburst on call</td><td>interval 4.2, dmg 26.0, radius 50.0, frags 6, size 3.0</td></tr><tr><td>11</td><td>TESLA COIL + ARC-NET -&gt; <strong>LIVE GRID</strong></td><td>electrified net, every anchor arcs to every other</td><td>interval 2.2, dmg 12.0, range 260.0</td></tr><tr><td>12</td><td>DEADEYE MARKER + RAILGUN -&gt; <strong>JUDGEMENT</strong></td><td>every mark answered by an orbital railslug</td><td>interval 2.6, dmg 60.0, radius 40.0, speed 980.0</td></tr><tr><td>13</td><td>SCATTERCASTER + PINBALL SLUG -&gt; <strong>SHRAPNEL STORM</strong></td><td>ricochets that hit harder with every bounce</td><td>interval 1.4, dmg 9.0, speed 410.0, size 2.6</td></tr><tr><td>14</td><td>TESLA COIL + CRYO JET -&gt; <strong>BEDLAM</strong></td><td>thermal shock, alternating arc and freeze pulses</td><td>interval 0.85, dmg 13.0, radius 110.0</td></tr></tbody></table></div></section>
-<section id="passives" data-acc="mg"><div class="shead"><h2>Passive Upgrades (Level-Up Augments)</h2></div>
-<p>Passives are the non-weapon upgrades offered when the player levels up. They are defined in the <code>PASSIVES</code> constant in <code>scripts/weapons.gd</code> (lines 238–253). Every passive stacks up to <code>PASSIVE_MAX_RANK = 5</code> (line 9); once a passive is at rank 5 it stops appearing in the offer pool (line 1781). Each pick raises that passive's rank by 1 (line 1866).</p>
-<p>The <code>id</code>, <code>name</code>, and <code>desc</code> strings below are copied verbatim from the source. The <strong>Effect per rank</strong> column shows the actual value applied in code — either in the "passive" branch of the pick handler (<code>scripts/weapons.gd</code> lines 1867–1892), in the fire-path multiplier helpers (<code>scripts/weapons.gd</code> lines 1447–1462), or read by <code>scripts/main.gd</code> / <code>scripts/player.gd</code> at the point of use.</p>
-<h3>All passives</h3>
-<div class="tw"><table><thead><tr><th>id</th><th>Name</th><th>In-game description</th><th>Effect per rank (from code)</th><th>Stacking</th><th>Applied where</th></tr></thead><tbody><tr><td><code>dmg</code></td><td>COMBAT STIMS</td><td>+15% all damage</td><td><code>base_damage_mult *= 1.15</code></td><td>Multiplicative / compounding</td><td>weapons.gd:1868–1870</td></tr><tr><td><code>cdr</code></td><td>REFLEX BOOSTER</td><td>+10% attack speed</td><td><code>base_cooldown_mult *= 0.90</code></td><td>Multiplicative / compounding</td><td>weapons.gd:1871–1873</td></tr><tr><td><code>spd</code></td><td>SERVO LEGS</td><td>+10% move speed</td><td><code>_player.speed_mult += 0.10</code></td><td>Additive</td><td>weapons.gd:1874–1875</td></tr><tr><td><code>hp</code></td><td>SUBDERMAL PLATING</td><td>+25 max integrity, restore 25</td><td><code>_player.max_hp += 25.0</code>; then <code>hp = min(hp + 25.0, max_hp)</code></td><td>Additive</td><td>weapons.gd:1876–1878</td></tr><tr><td><code>mag</code></td><td>COLLECTOR FIELD</td><td>+30% pickup radius</td><td><code>_player.pickup_radius *= 1.3</code></td><td>Multiplicative / compounding</td><td>weapons.gd:1879–1880</td></tr><tr><td><code>rgn</code></td><td>NANITE REPAIR</td><td>+0.6 integrity/sec</td><td><code>_player.regen += 0.6</code></td><td>Additive</td><td>weapons.gd:1881–1882</td></tr><tr><td><code>area</code></td><td>BLAST AMPLIFIER</td><td>+10% projectile size and blast radius</td><td>area multiplier = <code>1.0 + 0.10 * rank</code></td><td>Additive per rank</td><td>weapons.gd:1447–1448 (<code>_area_mult</code>)</td></tr><tr><td><code>pierce</code></td><td>PENETRATOR ROUNDS</td><td>+1 pierce every 2 ranks</td><td>bonus = <code>1 + rank / 2</code> (integer div) → ranks 1/2/3/4/5 give +1/+2/+2/+3/+3</td><td>Stepped</td><td>weapons.gd:1456–1459 (<code>_pierce_bonus</code>)</td></tr><tr><td><code>echo</code></td><td>ECHO CACHE</td><td>8% chance any volley fires twice</td><td>volley re-fires if <code>randf() &lt; 0.08 * rank</code> (8%/16%/24%/32%/40%)</td><td>Additive per rank</td><td>weapons.gd:466</td></tr><tr><td><code>dur</code></td><td>STASIS CAPACITOR</td><td>+12% effect durations</td><td>duration multiplier = <code>1.0 + 0.12 * rank</code></td><td>Additive per rank</td><td>weapons.gd:1450–1451 (<code>_dur_mult</code>)</td></tr><tr><td><code>greed</code></td><td>SCRAP MAGNET</td><td>+10% credits</td><td>credits <code>*= 1.0 + 0.10 * rank</code></td><td>Additive per rank</td><td>main.gd:739, 849</td></tr><tr><td><code>armor</code></td><td>ABLATIVE FOAM</td><td>-5% damage taken</td><td><code>incoming_mult *= 1.0 - 0.05 * rank</code> (5 ranks = -25%, not compounding)</td><td>Additive per rank</td><td>main.gd:137, 276</td></tr><tr><td><code>thorns</code></td><td>REACTIVE PLATING</td><td>contact attackers take 6 dmg/s</td><td><code>_player.thorns = 6.0 * rank</code> (6/12/18/24/30 dmg/s)</td><td>Additive per rank</td><td>weapons.gd:1884–1887; applied by EnemyManager contact branch</td></tr><tr><td><code>xp</code></td><td>NEURAL SIPHON</td><td>+8% XP</td><td>XP gain <code>*= 1.0 + 0.08 * rank</code></td><td>Additive per rank</td><td>main.gd:646–647</td></tr></tbody></table></div>
-<h3>Notes on application timing</h3>
-<ul><li><code>dmg</code>, <code>cdr</code>, <code>spd</code>, <code>hp</code>, <code>mag</code>, <code>rgn</code>, and <code>thorns</code> are applied immediately in the pick handler's <code>match c.id</code> switch (weapons.gd:1867–1887); <code>dmg</code> and <code>cdr</code> also call <code>_refresh_mults()</code>.</li><li><code>area</code>, <code>pierce</code>, <code>echo</code>, and <code>dur</code> store no state beyond the rank count — they are read live in the weapon fire paths via <code>_area_mult()</code>, <code>_pierce_bonus()</code>, <code>_dur_mult()</code>, and the echo roll.</li><li><code>greed</code>, <code>armor</code>, and <code>xp</code> are read by <code>main.gd</code> through <code>weapons.passive_rank(id)</code> at the moment credits/damage/XP are computed (comment at weapons.gd:1889).</li></ul></section>
-<section id="relics" data-acc="am2"><div class="shead"><h2>Relics &amp; Items (the Vault)</h2></div>
-<p>Relics are persistent gear pulled out of districts and stored in the <strong>Vault</strong>. A relic is just a <code>{hook: value}</code> dictionary — the same shape as a skill-web node — and <code>loadout_mods()</code> merges every equipped relic plus every owned skill node into one flat modifier dictionary that Main applies <strong>once at run start</strong>. Nothing here ticks per frame.</p>
-<p>Gear belongs to the <strong>frame (runner) it was fitted to</strong>, so switching frames switches kit. Each frame carries at most <code>RELIC_SLOTS = 3</code> relics. <code>toggle_equip()</code> fits or removes one (only if the Vault owns a copy); the first copy of a newly-granted relic auto-slots into an empty slot so the Vault is never full of gear you forgot to equip.</p>
-<h3>Hook glossary (how each key is consumed)</h3>
-<div class="tw"><table><thead><tr><th>Hook</th><th>Effect</th><th>Beneficial direction</th></tr></thead><tbody><tr><td><code>dmg</code></td><td><code>base_damage_mult *= 1.0 + dmg</code></td><td>+</td></tr><tr><td><code>cdr</code></td><td><code>base_cooldown_mult *= 1.0 + cdr</code> (fire-rate)</td><td>− (negative = faster)</td></tr><tr><td><code>mag</code></td><td><code>pickup_radius *= 1.0 + mag</code></td><td>+</td></tr><tr><td><code>armor</code></td><td><code>incoming_mult *= 1.0 + armor</code></td><td>− (negative = less damage taken; positive = glass cannon)</td></tr><tr><td><code>xp</code></td><td><code>_xp_mult = 1.0 + xp</code></td><td>+</td></tr><tr><td><code>hp</code></td><td>flat add to <code>max_hp</code> (applied before <code>hp_mult</code>)</td><td>+</td></tr><tr><td><code>hp_mult</code></td><td><code>max_hp = (max_hp + hp) * (1.0 + hp_mult)</code></td><td>+</td></tr><tr><td><code>spd</code></td><td><code>speed_mult += spd</code></td><td>+</td></tr><tr><td><code>rgn</code></td><td><code>regen += rgn</code></td><td>+</td></tr><tr><td><code>luck</code></td><td><code>luck() = 1.0 + luck</code> (rare-salvage &amp; tier-upgrade odds)</td><td>+</td></tr><tr><td><code>cr</code></td><td><code>credit_mult() = 1.0 + cr</code></td><td>+</td></tr><tr><td><code>reroll</code></td><td><code>run_rerolls += reroll</code> (level-up rerolls)</td><td>+</td></tr><tr><td><code>level</code></td><td><code>weapons.slots[0].level += level</code> (start levels)</td><td>+</td></tr><tr><td><code>lifesteal</code></td><td>heals <code>lifesteal</code> on kill</td><td>+</td></tr><tr><td><code>sdmg</code></td><td>signature-weapon damage only: <code>sig_dmg *= max(0.2, 1.0 + sdmg)</code></td><td>+</td></tr><tr><td><code>grant</code></td><td>names a BLACK ICE implant to start armed with (e.g. <code>"deadman"</code>)</td><td>—</td></tr></tbody></table></div>
-<p>Stars and condition-tier both scale <strong>only the beneficial direction</strong> of each numeric hook; the drawback it charges never grows. (<code>scdr</code> also exists as a signature hook but no relic uses it — only skill nodes.)</p>
-<h3>SALVAGE — rarity 0 (flat and friendly, the on-ramp)</h3>
-<div class="tw"><table><thead><tr><th>id</th><th>Name</th><th>Hooks (verbatim)</th></tr></thead><tbody><tr><td><code>chip</code></td><td>CRACKED TARGETING CHIP</td><td><code>{"dmg": 0.07}</code></td></tr><tr><td><code>coolant</code></td><td>FRAYED COOLANT LINE</td><td><code>{"cdr": -0.05}</code></td></tr><tr><td><code>plating</code></td><td>SCAVENGED PLATING</td><td><code>{"hp": 18.0}</code></td></tr><tr><td><code>servo</code></td><td>SPARE SERVO</td><td><code>{"spd": 0.05}</code></td></tr><tr><td><code>coil</code></td><td>SALVAGED MAGNET COIL</td><td><code>{"mag": 0.20}</code></td></tr><tr><td><code>rivet</code></td><td>LUCKY RIVET</td><td><code>{"luck": 0.06}</code></td></tr></tbody></table></div>
-<h3>MILSPEC — rarity 1 (every one charges for what it gives)</h3>
-<div class="tw"><table><thead><tr><th>id</th><th>Name</th><th>Hooks (verbatim)</th><th>Flags</th></tr></thead><tbody><tr><td><code>onyx</code></td><td>ONYX ROUND SET</td><td><code>{"dmg": 0.18, "spd": -0.08}</code></td><td></td></tr><tr><td><code>governor</code></td><td>OVERCLOCK GOVERNOR</td><td><code>{"cdr": -0.12, "hp": -12.0}</code></td><td></td></tr><tr><td><code>weave</code></td><td>CERAMIC WEAVE</td><td><code>{"armor": -0.12, "dmg": -0.06}</code></td><td></td></tr><tr><td><code>vampire</code></td><td>VAMPIRE BUS</td><td><code>{"rgn": 0.8, "dmg": -0.10}</code></td><td></td></tr><tr><td><code>trigger</code></td><td>HAIR TRIGGER</td><td><code>{"cdr": -0.18, "dmg": -0.15}</code></td><td></td></tr><tr><td><code>preload</code></td><td>PRELOAD CARTRIDGE</td><td><code>{"level": 2.0}</code></td><td><code>no_stars</code></td></tr><tr><td><code>symbols</code></td><td>DEBUG SYMBOLS</td><td><code>{"reroll": 2.0}</code></td><td><code>no_stars</code></td></tr><tr><td><code>hook</code></td><td>GRAVE ROBBER'S HOOK</td><td><code>{"luck": 0.15, "mag": 0.12, "xp": -0.10}</code></td><td></td></tr></tbody></table></div>
-<h3>BLACK ICE — rarity 2 (one per district, paid the first time you free it)</h3>
-<p>Granted by <code>record_run()</code> on first liberation of the matching district, rolled on the <code>TIER_WARDEN</code> condition table. <code>from</code> is the liberation trigger district.</p>
-<div class="tw"><table><thead><tr><th>id</th><th>Name</th><th>Hooks (verbatim)</th><th><code>from</code></th><th>Flags</th></tr></thead><tbody><tr><td><code>backup</code></td><td>MOTHER'S BACKUP</td><td><code>{"grant": "deadman"}</code></td><td>z02</td><td><code>no_stars</code></td></tr><tr><td><code>ballast</code></td><td>GHOST BALLAST</td><td><code>{"hp": 60.0, "spd": -0.18, "cdr": -0.10}</code></td><td>z04</td><td></td></tr><tr><td><code>glass</code></td><td>GLASS GHOST</td><td><code>{"dmg": 0.45, "hp_mult": -0.55}</code></td><td>z07</td><td></td></tr><tr><td><code>debt</code></td><td>THE COURIER'S DEBT</td><td><code>{"cr": 0.30, "luck": 0.30, "armor": 0.20}</code></td><td>z10</td><td></td></tr></tbody></table></div>
-<h3>FLOOR RELICS — one per floor, carried by that floor's Warden</h3>
-<p><code>home</code> is provenance for the Vault detail pane ("recovered from LEVEL 04"), not a grant trigger. On a Warden kill the Warden hands over <code>floor_relic(depth)</code> — guaranteed while the Vault lacks it, 35% chance on repeats — otherwise a generic Warden roll pays instead. Their intrinsic rarity is shown below (it drives the condition/refit behaviour and pool membership).</p>
-<div class="tw"><table><thead><tr><th>id</th><th>Name</th><th>Rarity</th><th>Hooks (verbatim)</th><th><code>home</code></th></tr></thead><tbody><tr><td><code>stamp</code></td><td>MANIFEST STAMP</td><td>1 (MILSPEC)</td><td><code>{"cr": 0.10}</code></td><td>z01</td></tr><tr><td><code>bladder</code></td><td>DREDGE BLADDER</td><td>1 (MILSPEC)</td><td><code>{"hp": 25.0, "rgn": 0.2}</code></td><td>z02</td></tr><tr><td><code>lens</code></td><td>SODIUM LENS</td><td>1 (MILSPEC)</td><td><code>{"dmg": 0.08, "mag": 0.10}</code></td><td>z03</td></tr><tr><td><code>slug</code></td><td>CORE SAMPLE SLUG</td><td>1 (MILSPEC)</td><td><code>{"luck": 0.12}</code></td><td>z04</td></tr><tr><td><code>seal</code></td><td>GOVERNOR'S SEAL</td><td>2 (BLACK ICE)</td><td><code>{"cdr": -0.08}</code></td><td>z05</td></tr><tr><td><code>index</code></td><td>LETHE INDEX</td><td>2 (BLACK ICE)</td><td><code>{"xp": 0.12}</code></td><td>z06</td></tr><tr><td><code>sprue</code></td><td>CASTING SPRUE</td><td>2 (BLACK ICE)</td><td><code>{"dmg": 0.12, "armor": 0.04}</code></td><td>z07</td></tr><tr><td><code>keel</code></td><td>MANTLE KEEL</td><td>2 (BLACK ICE)</td><td><code>{"armor": -0.10, "spd": -0.03}</code></td><td>z08</td></tr><tr><td><code>coin</code></td><td>PROOF COIN</td><td>2 (BLACK ICE)</td><td><code>{"reroll": 1.0, "luck": 0.08}</code></td><td>z09</td></tr><tr><td><code>instruction</code></td><td>THE FIRST INSTRUCTION</td><td>2 (BLACK ICE)</td><td><code>{"level": 1.0, "sdmg": 0.10}</code></td><td>z10</td></tr></tbody></table></div>
-<h3>Rarity tiers &amp; drop tables</h3>
-<p><code>RARITY_NAMES = ["SALVAGE", "MILSPEC", "BLACK ICE"]</code> (indices 0/1/2). Each drop rolls <strong>rarity first</strong>, then walks down to a lower non-empty rarity if the rolled pool is exhausted, preferring a relic you do not yet own.</p>
-<p>Drop-rate weights <code>[SALVAGE, MILSPEC, BLACK ICE]</code>:</p>
-<div class="tw"><table><thead><tr><th>Constant</th><th>Weights</th><th>Source</th></tr></thead><tbody><tr><td><code>DROP_WRECK</code></td><td><code>[0.74, 0.26, 0.0]</code></td><td>wreck / control-box salvage — "scavenging never turns up a legendary"</td></tr><tr><td><code>DROP_MIDBOSS</code></td><td><code>[0.72, 0.28, 0.0]</code></td><td>mid-run heavy unit ("HEAVY UNIT DOWN")</td></tr><tr><td><code>DROP_WARDEN</code></td><td><code>[0.45, 0.47, 0.08]</code></td><td>Warden — "the only source that can roll one" (BLACK ICE)</td></tr></tbody></table></div>
-<p>Drop sites (main.gd):</p>
-<ul><li><strong>Wreck salvage:</strong> <code>10% * luck</code> chance per wreck (first salvage of a save is guaranteed) → <code>roll_relic()</code> default = <code>DROP_WRECK</code> / <code>TIER_WRECK</code>.</li><li><strong>Mid-run heavy unit:</strong> <code>55%</code> chance → <code>roll_relic(DROP_MIDBOSS, TIER_MIDBOSS)</code>, plus +1 token.</li><li><strong>Warden (floor/district boss):</strong> floor relic first (see above), otherwise <code>roll_relic(DROP_WARDEN, TIER_WARDEN)</code> — always pays something, never twice.</li><li><strong>First district liberation:</strong> grants that district's <code>from</code> BLACK ICE at <code>roll_tier(TIER_WARDEN)</code>.</li></ul>
-<h3>Condition tiers (which relic vs. how good THIS one is)</h3>
-<p>Rarity says *which* relic dropped; the <strong>condition tier</strong> says how good the specific copy is. Tier 2 is the baseline the <code>RELICS</code> numbers are written at (<code>TIER_BASE = 2</code>), so pre-tier saves migrate to 2 losing nothing.</p>
-<div class="tw"><table><thead><tr><th>Tier</th><th><code>TIER_NAMES</code></th><th><code>TIER_SCALE</code> (multiplies the upside)</th></tr></thead><tbody><tr><td>1</td><td>SALVAGED</td><td>0.85</td></tr><tr><td>2</td><td>SERVICEABLE</td><td>1.00 (baseline)</td></tr><tr><td>3</td><td>CALIBRATED</td><td>1.15</td></tr><tr><td>4</td><td>PRISTINE</td><td>1.30</td></tr><tr><td>5</td><td>PROTOTYPE</td><td>1.50</td></tr></tbody></table></div>
-<p>Condition roll weights per source (<code>roll_tier</code>), with luck buying one upgrade at <code>randf() &lt; clamp(luck-1, 0, 0.75)</code>:</p>
-<div class="tw"><table><thead><tr><th>Constant</th><th>Weights (T1→T5)</th></tr></thead><tbody><tr><td><code>TIER_WRECK</code></td><td><code>[0.45, 0.35, 0.15, 0.05, 0.00]</code></td></tr><tr><td><code>TIER_MIDBOSS</code></td><td><code>[0.30, 0.35, 0.25, 0.09, 0.01]</code></td></tr><tr><td><code>TIER_WARDEN</code></td><td><code>[0.10, 0.25, 0.33, 0.24, 0.08]</code></td></tr></tbody></table></div>
-<p><code>vault_tier</code> stores the <strong>best condition ever held</strong> per relic; a worse copy never downgrades you, a better one refits.</p>
-<h3>Duplicates &amp; stars</h3>
-<p>Owning copies earns stars, which scale only the positive hooks:</p>
-<ul><li><code>STAR_AT = [1, 3, 6]</code> → 1 copy = ★, 3 = ★★, 6 = ★★★</li><li><code>STAR_SCALE = [1.0, 1.6, 2.2]</code> (applied to beneficial hooks; e.g. a ★★★ ONYX ROUND SET is +34% damage but still only −8% speed)</li></ul>
-<p>Past three stars (6 copies) a duplicate is not a dead drop: it converts to <strong>+2 tokens</strong> for the frame that found it, unless it is a better condition tier, in which case it refits instead. <code>no_stars</code> relics (preload, symbols, backup) never scale with stars.</p>
-<h3>Achievements tied to relics</h3>
-<ul><li><code>relic_first</code> → "GRAVE ROBBER" (recover your first relic)</li><li><code>relic_all</code> → "COMPLETE SET" (recover every relic in the Vault, i.e. <code>vault.size() &gt;= RELICS.size()</code>)</li></ul></section>
-<section id="web" data-acc="cy2"><div class="shead"><h2>The Skill Web</h2></div>
-<p>NEON REAPER does not give each frame its own skill tree. Instead there is <strong>one shared lattice</strong> — a single large web of nodes that every frame can path through — plus a <strong>private "wing" bolted onto each frame's core</strong>. In <code>scripts/game.gd</code>, the whole board lives in the <code>SKILL_WEB</code> constant (nodes), <code>WEB_LINKS</code> (edges), and <code>WEB_CORES</code> (which node is which frame's root). There are <strong>115 nodes</strong> in total: <strong>73 shared</strong> (including the 6 cores) and <strong>42 wing nodes</strong> (6 wings × 7 nodes each).</p>
+</section><section id="frames" data-acc="cy"><div class="shead"><h2>Playable Frames</h2></div><p class="note">Six hijacked war-frames, each a fixed signature weapon and its own integrity/speed/damage profile.</p><div class="tiles"><article class="tile">
+  <div class="ti"><img class="ic" src="icons/w_0.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>SCYTHE <span class="sub">assault frame</span></h4>
+  <div class="st"><span class="s"><b>HP</b>100.0</span><span class="s"><b>SPD</b>1.0× (115.0 px/s)</span><span class="s"><b>DMG</b>1.0×</span><span class="s"><b>RGN</b>0.5 /s</span></div>
+  <p>Signature: <strong>RIPPER SMG</strong> · core <code>core_scythe</code> · unlock <strong>0 (default)</strong></p></div>
+</article><article class="tile">
+  <div class="ti"><img class="ic" src="icons/w_6.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>HAVOC <span class="sub">demolition frame</span></h4>
+  <div class="st"><span class="s"><b>HP</b>85.0</span><span class="s"><b>SPD</b>0.94× (108.1 px/s)</span><span class="s"><b>DMG</b>1.2×</span><span class="s"><b>RGN</b>0.0 /s</span></div>
+  <p>Signature: <strong>TESLA MINES</strong> · core <code>core_havoc</code> · unlock <strong>400</strong></p></div>
+</article><article class="tile">
+  <div class="ti"><img class="ic" src="icons/w_3.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>TEMPEST <span class="sub">blade frame</span></h4>
+  <div class="st"><span class="s"><b>HP</b>90.0</span><span class="s"><b>SPD</b>1.15× (132.25 px/s)</span><span class="s"><b>DMG</b>1.0×</span><span class="s"><b>RGN</b>0.0 /s</span></div>
+  <p>Signature: <strong>ARC BLADES</strong> · core <code>core_tempest</code> · unlock <strong>900</strong></p></div>
+</article><article class="tile">
+  <div class="ti"><img class="ic" src="icons/w_15.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>VECTOR <span class="sub">pursuit frame</span></h4>
+  <div class="st"><span class="s"><b>HP</b>75.0</span><span class="s"><b>SPD</b>1.25× (143.75 px/s)</span><span class="s"><b>DMG</b>0.95×</span><span class="s"><b>RGN</b>0.0 /s</span></div>
+  <p>Signature: <strong>PINBALL SLUG</strong> · core <code>core_vector</code> · unlock <strong>1500</strong></p></div>
+</article><article class="tile">
+  <div class="ti"><img class="ic" src="icons/w_14.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>BULWARK <span class="sub">siege frame</span></h4>
+  <div class="st"><span class="s"><b>HP</b>140.0</span><span class="s"><b>SPD</b>0.85× (97.75 px/s)</span><span class="s"><b>DMG</b>1.1×</span><span class="s"><b>RGN</b>0.2 /s</span></div>
+  <p>Signature: <strong>SENTRY POD</strong> · core <code>core_bulwark</code> · unlock <strong>2500</strong></p></div>
+</article><article class="tile">
+  <div class="ti"><img class="ic" src="icons/w_10.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>THE COURIER <span class="sub">&quot;the ghost, as she was&quot;</span></h4>
+  <div class="st"><span class="s"><b>HP</b>85.0</span><span class="s"><b>SPD</b>1.1× (126.5 px/s)</span><span class="s"><b>DMG</b>1.05×</span><span class="s"><b>RGN</b>0.3 /s</span></div>
+  <p>Signature: <strong>ICEBREAKER</strong> · core <code>core_courier</code> · unlock <strong>0 (requires byte achievement)</strong></p></div>
+</article></div></section><section id="weapons" data-acc="am"><div class="shead"><h2>Weapons</h2></div><p class="note">Twenty base weapons — they auto-fire; you position. +30% damage and ~7% faster per level.</p><div class="tiles"><article class="tile">
+  <div class="ti"><img class="ic" src="icons/w_0.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>RIPPER SMG</h4>
+  <div class="st"><span class="s"><b>CD</b>0.45s</span><span class="s"><b>DMG</b>8.0</span></div>
+  <p>Auto-targeting slugthrower. speed 430, pierce 1, size 3.0. Fires 1 shot, +1 at lvl 3, +1 at lvl 6. Range 380.</p></div>
+</article><article class="tile">
+  <div class="ti"><img class="ic" src="icons/w_1.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>RAILGUN</h4>
+  <div class="st"><span class="s"><b>CD</b>3.1s</span><span class="s"><b>DMG</b>42.0</span></div>
+  <p>Hypervelocity piercing slug. speed 980, pierce 999, size 5.0. Range 520.</p></div>
+</article><article class="tile">
+  <div class="ti"><img class="ic" src="icons/w_2.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>EMP PULSE</h4>
+  <div class="st"><span class="s"><b>CD</b>2.7s</span><span class="s"><b>DMG</b>15.0</span></div>
+  <p>Radial shockburst. radius 85.0, grows ×1.08 per level.</p></div>
+</article><article class="tile">
+  <div class="ti"><img class="ic" src="icons/w_3.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>ARC BLADES</h4>
+  <div class="st"><span class="s"><b>CD</b>999.0s</span><span class="s"><b>DMG</b>10.0</span></div>
+  <p>Orbiting monofilament blades (never fires on cooldown; ticked as an orbit ring).</p></div>
+</article><article class="tile">
+  <div class="ti"><img class="ic" src="icons/w_4.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>NANO SWARM</h4>
+  <div class="st"><span class="s"><b>CD</b>1.4s</span><span class="s"><b>DMG</b>7.0</span></div>
+  <p>Homing hunter darts. speed 250, pierce 1, size 2.5. 2 darts, +1 at lvl 4.</p></div>
+</article><article class="tile">
+  <div class="ti"><img class="ic" src="icons/w_5.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>VIRUS UPLOAD</h4>
+  <div class="st"><span class="s"><b>CD</b>2.2s</span><span class="s"><b>DMG</b>9.0</span></div>
+  <p>Infectious decay, spreads on kill. speed 300, pierce 1, size 3.0, decay dur 3.0s.</p></div>
+</article><article class="tile">
+  <div class="ti"><img class="ic" src="icons/w_6.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>TESLA MINES</h4>
+  <div class="st"><span class="s"><b>CD</b>2.4s</span><span class="s"><b>DMG</b>30.0</span></div>
+  <p>Proximity shock charges. aoe 55.0 (×1.05/lvl), size 4.0, mine life 10s.</p></div>
+</article><article class="tile">
+  <div class="ti"><img class="ic" src="icons/w_7.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>ARC-NET</h4>
+  <div class="st"><span class="s"><b>CD</b>1.6s</span><span class="s"><b>DMG</b>14.0</span></div>
+  <p>Chain lightning cascade. chains 4 (+level/3), range 210, damage falls ×0.88 per jump.</p></div>
+</article><article class="tile">
+  <div class="ti"><img class="ic" src="icons/w_8.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>SPECTRAL LANCE</h4>
+  <div class="st"><span class="s"><b>CD</b>0.12s</span><span class="s"><b>DMG</b>4.5</span></div>
+  <p>Sweeping particle beam. length 240 (×1.04/lvl), sweeps 360°.</p></div>
+</article><article class="tile">
+  <div class="ti"><img class="ic" src="icons/w_9.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>HALO DROP</h4>
+  <div class="st"><span class="s"><b>CD</b>3.2s</span><span class="s"><b>DMG</b>55.0</span></div>
+  <p>Orbital saturation strike. radius 70 (×1.05/lvl), ~0.6s telegraph delay.</p></div>
+</article><article class="tile">
+  <div class="ti"><img class="ic" src="icons/w_10.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>ICEBREAKER</h4>
+  <div class="st"><span class="s"><b>CD</b>3.4s</span><span class="s"><b>DMG</b>6.0</span></div>
+  <p>Hacks machines to fight for you. speed 330, pierce 1, size 3.0. Ally cap 4 + level/2; convert dur (6.0 + level)s.</p></div>
+</article><article class="tile">
+  <div class="ti"><img class="ic" src="icons/w_11.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>SCATTERCASTER</h4>
+  <div class="st"><span class="s"><b>CD</b>1.5s</span><span class="s"><b>DMG</b>6.0</span></div>
+  <p>Close-range pellet storm. speed 390, pierce 1, size 2.2. 6 pellets (+level/3), spread arc 0.38. Range 240.</p></div>
+</article><article class="tile">
+  <div class="ti"><img class="ic" src="icons/w_12.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>MONOFIL DISC</h4>
+  <div class="st"><span class="s"><b>CD</b>2.3s</span><span class="s"><b>DMG</b>16.0</span></div>
+  <p>Returning shredder disc. speed 300, size 4.5, pierce 999, return time 0.55 + 0.05×level.</p></div>
+</article><article class="tile">
+  <div class="ti"><img class="ic" src="icons/w_13.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>STASIS WELL</h4>
+  <div class="st"><span class="s"><b>CD</b>4.0s</span><span class="s"><b>DMG</b>6.0</span></div>
+  <p>Field that drags machines to a crawl. radius 75 (×1.06/lvl), duration 3.0 + 0.2×level, dmg is dps.</p></div>
+</article><article class="tile">
+  <div class="ti"><img class="ic" src="icons/w_14.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>SENTRY POD</h4>
+  <div class="st"><span class="s"><b>CD</b>6.0s</span><span class="s"><b>DMG</b>9.0</span></div>
+  <p>Deployable autonomous gun. size 3.0. 2 pods, fire rate 0.5s, pod life 8.0 + 0.5×level.</p></div>
+</article><article class="tile">
+  <div class="ti"><img class="ic" src="icons/w_15.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>PINBALL SLUG</h4>
+  <div class="st"><span class="s"><b>CD</b>1.8s</span><span class="s"><b>DMG</b>18.0</span></div>
+  <p>Ricochets between machines. speed 420, size 3.5.</p></div>
+</article><article class="tile">
+  <div class="ti"><img class="ic" src="icons/w_16.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>FLAK CANNON</h4>
+  <div class="st"><span class="s"><b>CD</b>2.6s</span><span class="s"><b>DMG</b>22.0</span></div>
+  <p>Lobbed shell, airbursts over the pack. speed 240, blast radius 46, frags 6 (each frag ×0.25 dmg), size 4.0.</p></div>
+</article><article class="tile">
+  <div class="ti"><img class="ic" src="icons/w_17.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>TESLA COIL</h4>
+  <div class="st"><span class="s"><b>CD</b>1.15s</span><span class="s"><b>DMG</b>12.0</span></div>
+  <p>Arc to nearest machine, then jumps. jumps 3, range 190.</p></div>
+</article><article class="tile">
+  <div class="ti"><img class="ic" src="icons/w_18.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>CRYO JET</h4>
+  <div class="st"><span class="s"><b>CD</b>0.55s</span><span class="s"><b>DMG</b>5.0</span></div>
+  <p>Freezing cone, damages and slows. length 84.0.</p></div>
+</article><article class="tile">
+  <div class="ti"><img class="ic" src="icons/w_19.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>DEADEYE MARKER</h4>
+  <div class="st"><span class="s"><b>CD</b>3.4s</span><span class="s"><b>DMG</b>70.0</span></div>
+  <p>Marks the toughest machine for orbital deletion. radius 34.0. Bystanders take half; mark rides target until the lance falls.</p></div>
+</article></div></section><section id="fusions" data-acc="vi"><div class="shead"><h2>Fusions</h2></div><p class="note">Level two matching weapons and the level-up panel offers the fusion — one stronger weapon in place of the pair.</p><div class="tiles wide"><article class="tile fus">
+  <div class="recipe"><img class="ic sm" src="icons/w_1.png" alt="" loading="lazy"><span class="wn">RAILGUN</span><span class="op">+</span>
+    <img class="ic sm" src="icons/w_8.png" alt="" loading="lazy"><span class="wn">SPECTRAL LANCE</span><span class="op arr">&rarr;</span>
+    <img class="ic" src="icons/w_20.png" alt="" loading="lazy"><span class="wn res">NOVA LANCE</span></div>
+  <p>held annihilation beam, slug on every pulse</p><p class="stats"><code>interval 0.11, dmg 9.0, length 340.0, speed 980.0, size 5.0</code></p>
+</article><article class="tile fus">
+  <div class="recipe"><img class="ic sm" src="icons/w_5.png" alt="" loading="lazy"><span class="wn">VIRUS UPLOAD</span><span class="op">+</span>
+    <img class="ic sm" src="icons/w_4.png" alt="" loading="lazy"><span class="wn">NANO SWARM</span><span class="op arr">&rarr;</span>
+    <img class="ic" src="icons/w_21.png" alt="" loading="lazy"><span class="wn res">GREY PLAGUE</span></div>
+  <p>homing contagion cloud, spreads on every kill</p><p class="stats"><code>interval 1.0, dmg 13.0, speed 280.0, size 3.2</code></p>
+</article><article class="tile fus">
+  <div class="recipe"><img class="ic sm" src="icons/w_2.png" alt="" loading="lazy"><span class="wn">EMP PULSE</span><span class="op">+</span>
+    <img class="ic sm" src="icons/w_13.png" alt="" loading="lazy"><span class="wn">STASIS WELL</span><span class="op arr">&rarr;</span>
+    <img class="ic" src="icons/w_22.png" alt="" loading="lazy"><span class="wn res">SINGULARITY</span></div>
+  <p>collapsing well that pulses shockbursts</p><p class="stats"><code>interval 4.2, dmg 16.0, radius 95.0</code></p>
+</article><article class="tile fus">
+  <div class="recipe"><img class="ic sm" src="icons/w_6.png" alt="" loading="lazy"><span class="wn">TESLA MINES</span><span class="op">+</span>
+    <img class="ic sm" src="icons/w_9.png" alt="" loading="lazy"><span class="wn">HALO DROP</span><span class="op arr">&rarr;</span>
+    <img class="ic" src="icons/w_23.png" alt="" loading="lazy"><span class="wn res">CLUSTER DOCTRINE</span></div>
+  <p>orbital barrage that seeds live mines</p><p class="stats"><code>interval 2.9, dmg 48.0, radius 74.0, aoe 62.0, size 4.0</code></p>
+</article><article class="tile fus">
+  <div class="recipe"><img class="ic sm" src="icons/w_3.png" alt="" loading="lazy"><span class="wn">ARC BLADES</span><span class="op">+</span>
+    <img class="ic sm" src="icons/w_12.png" alt="" loading="lazy"><span class="wn">MONOFIL DISC</span><span class="op arr">&rarr;</span>
+    <img class="ic" src="icons/w_24.png" alt="" loading="lazy"><span class="wn res">BUZZSAW HALO</span></div>
+  <p>eight blades that fling shredder discs</p><p class="stats"><code>interval 1.5, dmg 15.0, speed 320.0, size 4.5</code></p>
+</article><article class="tile fus">
+  <div class="recipe"><img class="ic sm" src="icons/w_7.png" alt="" loading="lazy"><span class="wn">ARC-NET</span><span class="op">+</span>
+    <img class="ic sm" src="icons/w_10.png" alt="" loading="lazy"><span class="wn">ICEBREAKER</span><span class="op arr">&rarr;</span>
+    <img class="ic" src="icons/w_25.png" alt="" loading="lazy"><span class="wn res">HIVE PROTOCOL</span></div>
+  <p>cascade that converts what it kills</p><p class="stats"><code>interval 1.5, dmg 20.0, chains 7, range 240.0</code></p>
+</article><article class="tile fus">
+  <div class="recipe"><img class="ic sm" src="icons/w_11.png" alt="" loading="lazy"><span class="wn">SCATTERCASTER</span><span class="op">+</span>
+    <img class="ic sm" src="icons/w_15.png" alt="" loading="lazy"><span class="wn">PINBALL SLUG</span><span class="op arr">&rarr;</span>
+    <img class="ic" src="icons/w_26.png" alt="" loading="lazy"><span class="wn res">RICOCHET STORM</span></div>
+  <p>a wall of pellets, none of them stop</p><p class="stats"><code>interval 1.35, dmg 11.0, speed 400.0, size 2.6</code></p>
+</article><article class="tile fus">
+  <div class="recipe"><img class="ic sm" src="icons/w_0.png" alt="" loading="lazy"><span class="wn">RIPPER SMG</span><span class="op">+</span>
+    <img class="ic sm" src="icons/w_14.png" alt="" loading="lazy"><span class="wn">SENTRY POD</span><span class="op arr">&rarr;</span>
+    <img class="ic" src="icons/w_27.png" alt="" loading="lazy"><span class="wn res">WAR FACTORY</span></div>
+  <p>four pods, saturation fire, no downtime</p><p class="stats"><code>interval 4.5, dmg 13.0, size 3.0</code></p>
+</article><article class="tile fus">
+  <div class="recipe"><img class="ic sm" src="icons/w_18.png" alt="" loading="lazy"><span class="wn">CRYO JET</span><span class="op">+</span>
+    <img class="ic sm" src="icons/w_13.png" alt="" loading="lazy"><span class="wn">STASIS WELL</span><span class="op arr">&rarr;</span>
+    <img class="ic" src="icons/w_28.png" alt="" loading="lazy"><span class="wn res">GLACIER</span></div>
+  <p>a vortex that drags them in and freezes them brittle</p><p class="stats"><code>interval 4.0, dmg 14.0, radius 92.0</code></p>
+</article><article class="tile fus">
+  <div class="recipe"><img class="ic sm" src="icons/w_16.png" alt="" loading="lazy"><span class="wn">FLAK CANNON</span><span class="op">+</span>
+    <img class="ic sm" src="icons/w_14.png" alt="" loading="lazy"><span class="wn">SENTRY POD</span><span class="op arr">&rarr;</span>
+    <img class="ic" src="icons/w_29.png" alt="" loading="lazy"><span class="wn res">FIRE MISSION</span></div>
+  <p>autonomous howitzer battery, airburst on call</p><p class="stats"><code>interval 4.2, dmg 26.0, radius 50.0, frags 6, size 3.0</code></p>
+</article><article class="tile fus">
+  <div class="recipe"><img class="ic sm" src="icons/w_17.png" alt="" loading="lazy"><span class="wn">TESLA COIL</span><span class="op">+</span>
+    <img class="ic sm" src="icons/w_7.png" alt="" loading="lazy"><span class="wn">ARC-NET</span><span class="op arr">&rarr;</span>
+    <img class="ic" src="icons/w_30.png" alt="" loading="lazy"><span class="wn res">LIVE GRID</span></div>
+  <p>electrified net, every anchor arcs to every other</p><p class="stats"><code>interval 2.2, dmg 12.0, range 260.0</code></p>
+</article><article class="tile fus">
+  <div class="recipe"><img class="ic sm" src="icons/w_19.png" alt="" loading="lazy"><span class="wn">DEADEYE MARKER</span><span class="op">+</span>
+    <img class="ic sm" src="icons/w_1.png" alt="" loading="lazy"><span class="wn">RAILGUN</span><span class="op arr">&rarr;</span>
+    <img class="ic" src="icons/w_31.png" alt="" loading="lazy"><span class="wn res">JUDGEMENT</span></div>
+  <p>every mark answered by an orbital railslug</p><p class="stats"><code>interval 2.6, dmg 60.0, radius 40.0, speed 980.0</code></p>
+</article><article class="tile fus">
+  <div class="recipe"><img class="ic sm" src="icons/w_11.png" alt="" loading="lazy"><span class="wn">SCATTERCASTER</span><span class="op">+</span>
+    <img class="ic sm" src="icons/w_15.png" alt="" loading="lazy"><span class="wn">PINBALL SLUG</span><span class="op arr">&rarr;</span>
+    <img class="ic" src="icons/w_32.png" alt="" loading="lazy"><span class="wn res">SHRAPNEL STORM</span></div>
+  <p>ricochets that hit harder with every bounce</p><p class="stats"><code>interval 1.4, dmg 9.0, speed 410.0, size 2.6</code></p>
+</article><article class="tile fus">
+  <div class="recipe"><img class="ic sm" src="icons/w_17.png" alt="" loading="lazy"><span class="wn">TESLA COIL</span><span class="op">+</span>
+    <img class="ic sm" src="icons/w_18.png" alt="" loading="lazy"><span class="wn">CRYO JET</span><span class="op arr">&rarr;</span>
+    <img class="ic" src="icons/w_33.png" alt="" loading="lazy"><span class="wn res">BEDLAM</span></div>
+  <p>thermal shock, alternating arc and freeze pulses</p><p class="stats"><code>interval 0.85, dmg 13.0, radius 110.0</code></p>
+</article></div></section><section id="passives" data-acc="mg"><div class="shead"><h2>Passives</h2></div><p class="note">Stat augments offered on level-up, each up to rank 5.</p><div class="tiles"><article class="tile">
+  <div class="ti"><img class="ic" src="icons/p_dmg.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>COMBAT STIMS <span class="sub">+15% all damage</span></h4>
+  <p>base_damage_mult = 1.15</p></div>
+</article><article class="tile">
+  <div class="ti"><img class="ic" src="icons/p_cdr.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>REFLEX BOOSTER <span class="sub">+10% attack speed</span></h4>
+  <p>base_cooldown_mult = 0.90</p></div>
+</article><article class="tile">
+  <div class="ti"><img class="ic" src="icons/p_spd.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>SERVO LEGS <span class="sub">+10% move speed</span></h4>
+  <p>_player.speed_mult += 0.10</p></div>
+</article><article class="tile">
+  <div class="ti"><img class="ic" src="icons/p_hp.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>SUBDERMAL PLATING <span class="sub">+25 max integrity, restore 25</span></h4>
+  <p>_player.max_hp += 25.0; then hp = min(hp + 25.0, max_hp)</p></div>
+</article><article class="tile">
+  <div class="ti"><img class="ic" src="icons/p_mag.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>COLLECTOR FIELD <span class="sub">+30% pickup radius</span></h4>
+  <p>_player.pickup_radius = 1.3</p></div>
+</article><article class="tile">
+  <div class="ti"><img class="ic" src="icons/p_rgn.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>NANITE REPAIR <span class="sub">+0.6 integrity/sec</span></h4>
+  <p>_player.regen += 0.6</p></div>
+</article><article class="tile">
+  <div class="ti"><img class="ic" src="icons/p_area.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>BLAST AMPLIFIER <span class="sub">+10% projectile size and blast radius</span></h4>
+  <p>area multiplier = 1.0 + 0.10  rank</p></div>
+</article><article class="tile">
+  <div class="ti"><img class="ic" src="icons/p_pierce.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>PENETRATOR ROUNDS <span class="sub">+1 pierce every 2 ranks</span></h4>
+  <p>bonus = 1 + rank / 2 (integer div) → ranks 1/2/3/4/5 give +1/+2/+2/+3/+3</p></div>
+</article><article class="tile">
+  <div class="ti"><img class="ic" src="icons/p_echo.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>ECHO CACHE <span class="sub">8% chance any volley fires twice</span></h4>
+  <p>volley re-fires if randf() &lt; 0.08  rank (8%/16%/24%/32%/40%)</p></div>
+</article><article class="tile">
+  <div class="ti"><img class="ic" src="icons/p_dur.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>STASIS CAPACITOR <span class="sub">+12% effect durations</span></h4>
+  <p>duration multiplier = 1.0 + 0.12  rank</p></div>
+</article><article class="tile">
+  <div class="ti"><img class="ic" src="icons/p_greed.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>SCRAP MAGNET <span class="sub">+10% credits</span></h4>
+  <p>credits = 1.0 + 0.10  rank</p></div>
+</article><article class="tile">
+  <div class="ti"><img class="ic" src="icons/p_armor.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>ABLATIVE FOAM <span class="sub">-5% damage taken</span></h4>
+  <p>incoming_mult = 1.0 - 0.05  rank (5 ranks = -25%, not compounding)</p></div>
+</article><article class="tile">
+  <div class="ti"><img class="ic" src="icons/p_thorns.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>REACTIVE PLATING <span class="sub">contact attackers take 6 dmg/s</span></h4>
+  <p>_player.thorns = 6.0  rank (6/12/18/24/30 dmg/s)</p></div>
+</article><article class="tile">
+  <div class="ti"><img class="ic" src="icons/p_xp.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>NEURAL SIPHON <span class="sub">+8% XP</span></h4>
+  <p>XP gain = 1.0 + 0.08  rank</p></div>
+</article></div></section><section id="relics" data-acc="am2"><div class="shead"><h2>Relics &amp; Items</h2></div><p class="note">Salvage bolted onto the frame between runs. COMMON · MILSPEC · BLACK ICE.</p><div class="tiles"><article class="tile" data-tier="0">
+  <div class="ti"><img class="ic" src="icons/r_chip.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>CRACKED TARGETING CHIP <span class="tier t0">COMMON</span></h4>
+  <p><code>{&quot;dmg&quot;: 0.07}</code></p></div>
+</article><article class="tile" data-tier="0">
+  <div class="ti"><img class="ic" src="icons/r_coolant.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>FRAYED COOLANT LINE <span class="tier t0">COMMON</span></h4>
+  <p><code>{&quot;cdr&quot;: -0.05}</code></p></div>
+</article><article class="tile" data-tier="0">
+  <div class="ti"><img class="ic" src="icons/r_rivet.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>LUCKY RIVET <span class="tier t0">COMMON</span></h4>
+  <p><code>{&quot;luck&quot;: 0.06}</code></p></div>
+</article><article class="tile" data-tier="0">
+  <div class="ti"><img class="ic" src="icons/r_coil.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>SALVAGED MAGNET COIL <span class="tier t0">COMMON</span></h4>
+  <p><code>{&quot;mag&quot;: 0.20}</code></p></div>
+</article><article class="tile" data-tier="0">
+  <div class="ti"><img class="ic" src="icons/r_plating.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>SCAVENGED PLATING <span class="tier t0">COMMON</span></h4>
+  <p><code>{&quot;hp&quot;: 18.0}</code></p></div>
+</article><article class="tile" data-tier="0">
+  <div class="ti"><img class="ic" src="icons/r_servo.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>SPARE SERVO <span class="tier t0">COMMON</span></h4>
+  <p><code>{&quot;spd&quot;: 0.05}</code></p></div>
+</article><article class="tile" data-tier="1">
+  <div class="ti"><img class="ic" src="icons/r_weave.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>CERAMIC WEAVE <span class="tier t1">MILSPEC</span></h4>
+  <p><code>{&quot;armor&quot;: -0.12, &quot;dmg&quot;: -0.06}</code></p></div>
+</article><article class="tile" data-tier="1">
+  <div class="ti"><img class="ic" src="icons/r_slug.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>CORE SAMPLE SLUG <span class="tier t1">MILSPEC</span></h4>
+  <p><code>{&quot;luck&quot;: 0.12}</code></p></div>
+</article><article class="tile" data-tier="1">
+  <div class="ti"><img class="ic" src="icons/r_symbols.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>DEBUG SYMBOLS <span class="tier t1">MILSPEC</span></h4>
+  <p><code>{&quot;reroll&quot;: 2.0}</code></p></div>
+</article><article class="tile" data-tier="1">
+  <div class="ti"><img class="ic" src="icons/r_bladder.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>DREDGE BLADDER <span class="tier t1">MILSPEC</span></h4>
+  <p><code>{&quot;hp&quot;: 25.0, &quot;rgn&quot;: 0.2}</code></p></div>
+</article><article class="tile" data-tier="1">
+  <div class="ti"><img class="ic" src="icons/r_hook.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>GRAVE ROBBER&#x27;S HOOK <span class="tier t1">MILSPEC</span></h4>
+  <p><code>{&quot;luck&quot;: 0.15, &quot;mag&quot;: 0.12, &quot;xp&quot;: -0.10}</code></p></div>
+</article><article class="tile" data-tier="1">
+  <div class="ti"><img class="ic" src="icons/r_trigger.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>HAIR TRIGGER <span class="tier t1">MILSPEC</span></h4>
+  <p><code>{&quot;cdr&quot;: -0.18, &quot;dmg&quot;: -0.15}</code></p></div>
+</article><article class="tile" data-tier="1">
+  <div class="ti"><img class="ic" src="icons/r_stamp.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>MANIFEST STAMP <span class="tier t1">MILSPEC</span></h4>
+  <p><code>{&quot;cr&quot;: 0.10}</code></p></div>
+</article><article class="tile" data-tier="1">
+  <div class="ti"><img class="ic" src="icons/r_onyx.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>ONYX ROUND SET <span class="tier t1">MILSPEC</span></h4>
+  <p><code>{&quot;dmg&quot;: 0.18, &quot;spd&quot;: -0.08}</code></p></div>
+</article><article class="tile" data-tier="1">
+  <div class="ti"><img class="ic" src="icons/r_governor.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>OVERCLOCK GOVERNOR <span class="tier t1">MILSPEC</span></h4>
+  <p><code>{&quot;cdr&quot;: -0.12, &quot;hp&quot;: -12.0}</code></p></div>
+</article><article class="tile" data-tier="1">
+  <div class="ti"><img class="ic" src="icons/r_preload.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>PRELOAD CARTRIDGE <span class="tier t1">MILSPEC</span></h4>
+  <p><code>{&quot;level&quot;: 2.0}</code></p></div>
+</article><article class="tile" data-tier="1">
+  <div class="ti"><img class="ic" src="icons/r_lens.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>SODIUM LENS <span class="tier t1">MILSPEC</span></h4>
+  <p><code>{&quot;dmg&quot;: 0.08, &quot;mag&quot;: 0.10}</code></p></div>
+</article><article class="tile" data-tier="1">
+  <div class="ti"><img class="ic" src="icons/r_vampire.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>VAMPIRE BUS <span class="tier t1">MILSPEC</span></h4>
+  <p><code>{&quot;rgn&quot;: 0.8, &quot;dmg&quot;: -0.10}</code></p></div>
+</article><article class="tile" data-tier="2">
+  <div class="ti"><img class="ic" src="icons/r_sprue.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>CASTING SPRUE <span class="tier t2">BLACK ICE</span></h4>
+  <p><code>{&quot;dmg&quot;: 0.12, &quot;armor&quot;: 0.04}</code></p></div>
+</article><article class="tile" data-tier="2">
+  <div class="ti"><img class="ic" src="icons/r_ballast.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>GHOST BALLAST <span class="tier t2">BLACK ICE</span></h4>
+  <p><code>{&quot;hp&quot;: 60.0, &quot;spd&quot;: -0.18, &quot;cdr&quot;: -0.10}</code></p></div>
+</article><article class="tile" data-tier="2">
+  <div class="ti"><img class="ic" src="icons/r_glass.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>GLASS GHOST <span class="tier t2">BLACK ICE</span></h4>
+  <p><code>{&quot;dmg&quot;: 0.45, &quot;hp_mult&quot;: -0.55}</code></p></div>
+</article><article class="tile" data-tier="2">
+  <div class="ti"><img class="ic" src="icons/r_seal.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>GOVERNOR&#x27;S SEAL <span class="tier t2">BLACK ICE</span></h4>
+  <p><code>{&quot;cdr&quot;: -0.08}</code></p></div>
+</article><article class="tile" data-tier="2">
+  <div class="ti"><img class="ic" src="icons/r_index.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>LETHE INDEX <span class="tier t2">BLACK ICE</span></h4>
+  <p><code>{&quot;xp&quot;: 0.12}</code></p></div>
+</article><article class="tile" data-tier="2">
+  <div class="ti"><img class="ic" src="icons/r_keel.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>MANTLE KEEL <span class="tier t2">BLACK ICE</span></h4>
+  <p><code>{&quot;armor&quot;: -0.10, &quot;spd&quot;: -0.03}</code></p></div>
+</article><article class="tile" data-tier="2">
+  <div class="ti"><img class="ic" src="icons/r_backup.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>MOTHER&#x27;S BACKUP <span class="tier t2">BLACK ICE</span></h4>
+  <p><code>{&quot;grant&quot;: &quot;deadman&quot;}</code></p></div>
+</article><article class="tile" data-tier="2">
+  <div class="ti"><img class="ic" src="icons/r_coin.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>PROOF COIN <span class="tier t2">BLACK ICE</span></h4>
+  <p><code>{&quot;reroll&quot;: 1.0, &quot;luck&quot;: 0.08}</code></p></div>
+</article><article class="tile" data-tier="2">
+  <div class="ti"><img class="ic" src="icons/r_debt.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>THE COURIER&#x27;S DEBT <span class="tier t2">BLACK ICE</span></h4>
+  <p><code>{&quot;cr&quot;: 0.30, &quot;luck&quot;: 0.30, &quot;armor&quot;: 0.20}</code></p></div>
+</article><article class="tile" data-tier="2">
+  <div class="ti"><img class="ic" src="icons/r_instruction.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>THE FIRST INSTRUCTION <span class="tier t2">BLACK ICE</span></h4>
+  <p><code>{&quot;level&quot;: 1.0, &quot;sdmg&quot;: 0.10}</code></p></div>
+</article></div></section><section id="web" data-acc="cy2"><div class="shead"><h2>The Skill Web</h2></div><p>NEON REAPER does not give each frame its own skill tree. Instead there is <strong>one shared lattice</strong> — a single large web of nodes that every frame can path through — plus a <strong>private "wing" bolted onto each frame's core</strong>. In <code>scripts/game.gd</code>, the whole board lives in the <code>SKILL_WEB</code> constant (nodes), <code>WEB_LINKS</code> (edges), and <code>WEB_CORES</code> (which node is which frame's root). There are <strong>115 nodes</strong> in total: <strong>73 shared</strong> (including the 6 cores) and <strong>42 wing nodes</strong> (6 wings × 7 nodes each).</p>
 <h3>Frames and trees</h3>
 <p>There are <strong>6 frames</strong>, one per entry in <code>WEB_CORES</code>. Each has a free, pre-owned root node (cost 0) that anchors it to the lattice:</p>
-<div class="tw"><table><thead><tr><th>Frame key</th><th>Core node id</th><th>Core name</th></tr></thead><tbody><tr><td><code>scythe</code></td><td><code>core_scythe</code></td><td>SCYTHE // ATTRITION CORE</td></tr><tr><td><code>bulwark</code></td><td><code>core_bulwark</code></td><td>BULWARK // EMPLACEMENT CORE</td></tr><tr><td><code>havoc</code></td><td><code>core_havoc</code></td><td>HAVOC // ORDNANCE CORE</td></tr><tr><td><code>vector</code></td><td><code>core_vector</code></td><td>VECTOR // PURSUIT CORE</td></tr><tr><td><code>tempest</code></td><td><code>core_tempest</code></td><td>TEMPEST // VELOCITY CORE</td></tr><tr><td><code>courier</code></td><td><code>core_courier</code></td><td>COURIER // LOGISTICS CORE</td></tr></tbody></table></div>
+<div class="tw"><table class="wrap"><thead><tr><th>Frame key</th><th>Core node id</th><th>Core name</th></tr></thead><tbody><tr><td><code>scythe</code></td><td><code>core_scythe</code></td><td>SCYTHE // ATTRITION CORE</td></tr><tr><td><code>bulwark</code></td><td><code>core_bulwark</code></td><td>BULWARK // EMPLACEMENT CORE</td></tr><tr><td><code>havoc</code></td><td><code>core_havoc</code></td><td>HAVOC // ORDNANCE CORE</td></tr><tr><td><code>vector</code></td><td><code>core_vector</code></td><td>VECTOR // PURSUIT CORE</td></tr><tr><td><code>tempest</code></td><td><code>core_tempest</code></td><td>TEMPEST // VELOCITY CORE</td></tr><tr><td><code>courier</code></td><td><code>core_courier</code></td><td>COURIER // LOGISTICS CORE</td></tr></tbody></table></div>
 <p><code>web_nodes(runner)</code> returns the tree a single frame can see: it walks <code>SKILL_WEB</code> and keeps a node only if it has no <code>only</code> tag (shared lattice) <strong>or</strong> its <code>only</code> tag matches that frame. Every other frame's wing is omitted entirely — as the code comment puts it, "six trees that differ in shape read as six trees, not one tree with locks." A node carrying <code>only</code> is that frame's private wing (<code>web_is_wing()</code>), and a wing only ever upgrades the signature weapon that frame is born holding — its bonuses use the signature-scoped keys <code>sdmg</code>/<code>scdr</code>, never the whole arsenal.</p>
 <h3>Node classes and cost</h3>
 <p>The <code>cls</code> field sorts nodes into classes, and cost is fixed by class:</p>
-<div class="tw"><table><thead><tr><th>Class</th><th><code>cls</code> value</th><th>Cost (tokens)</th><th>Count</th><th>Notes</th></tr></thead><tbody><tr><td>Core</td><td><code>minor</code>*</td><td><strong>0</strong></td><td>6</td><td>Frame roots; id begins <code>core_</code>, free &amp; pre-owned. Excluded from <code>web_total</code>.</td></tr><tr><td>Minor</td><td><code>minor</code></td><td><strong>1</strong></td><td>25 shared + 18 wing</td><td>Small single-stat bumps.</td></tr><tr><td>Notable</td><td><code>notable</code></td><td><strong>3</strong></td><td>39 shared + 18 wing</td><td>Two/three-stat nodes, conditionals, and the signature "splice" nodes.</td></tr><tr><td>Keystone</td><td><code>keystone</code></td><td><strong>6</strong></td><td>9 shared + 6 wing</td><td>Build-defining; often a big upside paired with a real cost.</td></tr></tbody></table></div>
+<div class="tw"><table class="wrap"><thead><tr><th>Class</th><th><code>cls</code> value</th><th>Cost (tokens)</th><th>Count</th><th>Notes</th></tr></thead><tbody><tr><td>Core</td><td><code>minor</code>*</td><td><strong>0</strong></td><td>6</td><td>Frame roots; id begins <code>core_</code>, free &amp; pre-owned. Excluded from <code>web_total</code>.</td></tr><tr><td>Minor</td><td><code>minor</code></td><td><strong>1</strong></td><td>25 shared + 18 wing</td><td>Small single-stat bumps.</td></tr><tr><td>Notable</td><td><code>notable</code></td><td><strong>3</strong></td><td>39 shared + 18 wing</td><td>Two/three-stat nodes, conditionals, and the signature "splice" nodes.</td></tr><tr><td>Keystone</td><td><code>keystone</code></td><td><strong>6</strong></td><td>9 shared + 6 wing</td><td>Build-defining; often a big upside paired with a real cost.</td></tr></tbody></table></div>
 <p>\*The 6 cores use <code>cls: "minor"</code> but cost 0 and act as the class of their own — the frame anchor.</p>
 <p>Buying is gated by <code>web_blocked()</code>: a node must touch something you already own, you must be able to pay its cost, and <code>web_spent(runner) + cost</code> must stay within <code>web_cap(runner)</code>.</p>
 <h3>The keystones</h3>
 <p>There are <strong>15 keystones</strong>. Nine live in the shared lattice; six are wing keystones (one per frame, each stamping that frame's weapon signature). Values are copied verbatim from each node's <code>hooks</code>.</p>
 <p><strong>Shared keystones (cost 6 each):</strong></p>
-<div class="tw"><table><thead><tr><th>Node</th><th>Name</th><th>Effect (hooks)</th><th>Extra</th></tr></thead><tbody><tr><td><code>ks_redqueen</code></td><td>RED QUEEN PROTOCOL</td><td><code>lifesteal 0.35, dmg 0.10, armor 0.25</code></td><td></td></tr><tr><td><code>ks_ghostwire</code></td><td>GHOST IN THE WIRE</td><td><code>hp_mult -0.25</code></td><td>grants <code>deadman</code></td></tr><tr><td><code>ks_deadzone</code></td><td>DEAD ZONE DOCTRINE</td><td><code>hp_mult -0.20</code></td><td>proto <code>earlyevo</code></td></tr><tr><td><code>ks_terminal</code></td><td>TERMINAL VELOCITY</td><td><code>spd 0.25, dmg 0.15, rgn -3.0</code></td><td></td></tr><tr><td><code>ks_fortress</code></td><td>FORTRESS DOCTRINE</td><td><code>hp 70.0, armor -0.20, spd -0.30</code></td><td></td></tr><tr><td><code>ks_mono</code></td><td>MONOCULTURE CLAUSE</td><td>*(no stat hooks)*</td><td>proto <code>focus</code></td></tr><tr><td><code>ks_perpetual</code></td><td>PERPETUAL EDGE</td><td><code>spd 0.15, dmg 0.10</code></td><td>proto <code>nostop</code></td></tr><tr><td><code>ks_liquid</code></td><td>LIQUIDATION NOTICE</td><td><code>cr 0.60, luck 0.40, xp -0.25</code></td><td></td></tr><tr><td><code>ks_zerosum</code></td><td>ZERO-SUM CLAUSE</td><td><code>dmg 0.22, cdr -0.08, armor 0.30</code></td><td>cond <code>crowd</code> (hub centre)</td></tr></tbody></table></div>
+<div class="tw"><table class="wrap"><thead><tr><th>Node</th><th>Name</th><th>Effect (hooks)</th><th>Extra</th></tr></thead><tbody><tr><td><code>ks_redqueen</code></td><td>RED QUEEN PROTOCOL</td><td><code>lifesteal 0.35, dmg 0.10, armor 0.25</code></td><td></td></tr><tr><td><code>ks_ghostwire</code></td><td>GHOST IN THE WIRE</td><td><code>hp_mult -0.25</code></td><td>grants <code>deadman</code></td></tr><tr><td><code>ks_deadzone</code></td><td>DEAD ZONE DOCTRINE</td><td><code>hp_mult -0.20</code></td><td>proto <code>earlyevo</code></td></tr><tr><td><code>ks_terminal</code></td><td>TERMINAL VELOCITY</td><td><code>spd 0.25, dmg 0.15, rgn -3.0</code></td><td></td></tr><tr><td><code>ks_fortress</code></td><td>FORTRESS DOCTRINE</td><td><code>hp 70.0, armor -0.20, spd -0.30</code></td><td></td></tr><tr><td><code>ks_mono</code></td><td>MONOCULTURE CLAUSE</td><td>*(no stat hooks)*</td><td>proto <code>focus</code></td></tr><tr><td><code>ks_perpetual</code></td><td>PERPETUAL EDGE</td><td><code>spd 0.15, dmg 0.10</code></td><td>proto <code>nostop</code></td></tr><tr><td><code>ks_liquid</code></td><td>LIQUIDATION NOTICE</td><td><code>cr 0.60, luck 0.40, xp -0.25</code></td><td></td></tr><tr><td><code>ks_zerosum</code></td><td>ZERO-SUM CLAUSE</td><td><code>dmg 0.22, cdr -0.08, armor 0.30</code></td><td>cond <code>crowd</code> (hub centre)</td></tr></tbody></table></div>
 <p><strong>Wing keystones (cost 6 each, one per frame — define the weapon signature via <code>sig</code>):</strong></p>
-<div class="tw"><table><thead><tr><th>Node</th><th>Name</th><th>Frame (<code>only</code>)</th><th>Effect (hooks)</th><th>Signature</th></tr></thead><tbody><tr><td><code>sw_twin</code></td><td>TWINFEED DOCTRINE</td><td>scythe</td><td><code>sdmg -0.10, scdr 0.10</code></td><td><code>twinfeed</code></td></tr><tr><td><code>bp_emplace</code></td><td>PERMANENT EMPLACEMENT</td><td>bulwark</td><td><code>spd -0.18</code></td><td><code>emplace</code></td></tr><tr><td><code>hp_cluster</code></td><td>CLUSTER MUNITIONS</td><td>havoc</td><td><code>armor 0.15</code></td><td><code>cluster</code></td></tr><tr><td><code>vp_chain</code></td><td>CHAINSHOT PROTOCOL</td><td>vector</td><td><code>sdmg -0.15</code></td><td><code>chainshot</code></td></tr><tr><td><code>tb_rend</code></td><td>REND DOCTRINE</td><td>tempest</td><td><code>hp_mult -0.15</code></td><td><code>rend</code></td></tr><tr><td><code>cp_conscript</code></td><td>CONSCRIPTION ACT</td><td>courier</td><td><code>dmg -0.12</code></td><td><code>conscript</code></td></tr></tbody></table></div>
+<div class="tw"><table class="wrap"><thead><tr><th>Node</th><th>Name</th><th>Frame (<code>only</code>)</th><th>Effect (hooks)</th><th>Signature</th></tr></thead><tbody><tr><td><code>sw_twin</code></td><td>TWINFEED DOCTRINE</td><td>scythe</td><td><code>sdmg -0.10, scdr 0.10</code></td><td><code>twinfeed</code></td></tr><tr><td><code>bp_emplace</code></td><td>PERMANENT EMPLACEMENT</td><td>bulwark</td><td><code>spd -0.18</code></td><td><code>emplace</code></td></tr><tr><td><code>hp_cluster</code></td><td>CLUSTER MUNITIONS</td><td>havoc</td><td><code>armor 0.15</code></td><td><code>cluster</code></td></tr><tr><td><code>vp_chain</code></td><td>CHAINSHOT PROTOCOL</td><td>vector</td><td><code>sdmg -0.15</code></td><td><code>chainshot</code></td></tr><tr><td><code>tb_rend</code></td><td>REND DOCTRINE</td><td>tempest</td><td><code>hp_mult -0.15</code></td><td><code>rend</code></td></tr><tr><td><code>cp_conscript</code></td><td>CONSCRIPTION ACT</td><td>courier</td><td><code>dmg -0.12</code></td><td><code>conscript</code></td></tr></tbody></table></div>
 <h3>The central hub and its gates</h3>
 <p>At the middle of the shared lattice sits a ring where all six frames converge. Four <strong>junctions</strong> (minor, cost 1) sit at the corners, four <strong>gates</strong> (notable, cost 3) sit between them, and the keystone <strong>ZERO-SUM CLAUSE</strong> sits dead centre, reachable only from all four gates. The ring links run junction → gate → junction all the way around (<code>hb_nw → gate_n → hb_ne → gate_e → hb_se → gate_s → hb_sw → gate_w → hb_nw</code>), and every frame's outer branch feeds into it (e.g. <code>bw_bulk → hb_nw</code>, <code>hv_rigs → hb_ne</code>, <code>te_mono → hb_se</code>, <code>co_bus → hb_sw</code>, <code>sc_trigger → gate_w</code>, <code>ve_bus → gate_e</code>, <code>ks_mono → gate_n</code>, <code>ks_liquid → gate_s</code>).</p>
-<div class="tw"><table><thead><tr><th>Node</th><th>Name</th><th>Class</th><th>Cost</th><th>Effect (hooks)</th></tr></thead><tbody><tr><td><code>hb_nw</code></td><td>ONYX JUNCTION</td><td>minor</td><td>1</td><td><code>hp 20.0</code></td></tr><tr><td><code>hb_ne</code></td><td>MUNITIONS JUNCTION</td><td>minor</td><td>1</td><td><code>dmg 0.04</code></td></tr><tr><td><code>hb_sw</code></td><td>LEDGER JUNCTION</td><td>minor</td><td>1</td><td><code>cr 0.12</code></td></tr><tr><td><code>hb_se</code></td><td>TELEMETRY JUNCTION</td><td>minor</td><td>1</td><td><code>spd 0.05</code></td></tr><tr><td><code>gate_n</code></td><td>AUDIT GATE</td><td>notable</td><td>3</td><td><code>dmg 0.06, mag 0.15, xp 0.10</code></td></tr><tr><td><code>gate_e</code></td><td>THROUGHPUT GATE</td><td>notable</td><td>3</td><td><code>cdr -0.04, dmg 0.04</code></td></tr><tr><td><code>gate_s</code></td><td>SALVAGE GATE</td><td>notable</td><td>3</td><td><code>cr 0.25, luck 0.25, reroll 1.0</code></td></tr><tr><td><code>gate_w</code></td><td>MEDICAL GATE</td><td>notable</td><td>3</td><td><code>rgn 0.50, hp 15.0, lifesteal 0.04</code></td></tr><tr><td><code>ks_zerosum</code></td><td>ZERO-SUM CLAUSE</td><td>keystone</td><td>6</td><td><code>dmg 0.22, cdr -0.08, armor 0.30</code> (cond <code>crowd</code>)</td></tr></tbody></table></div>
+<div class="tw"><table class="wrap"><thead><tr><th>Node</th><th>Name</th><th>Class</th><th>Cost</th><th>Effect (hooks)</th></tr></thead><tbody><tr><td><code>hb_nw</code></td><td>ONYX JUNCTION</td><td>minor</td><td>1</td><td><code>hp 20.0</code></td></tr><tr><td><code>hb_ne</code></td><td>MUNITIONS JUNCTION</td><td>minor</td><td>1</td><td><code>dmg 0.04</code></td></tr><tr><td><code>hb_sw</code></td><td>LEDGER JUNCTION</td><td>minor</td><td>1</td><td><code>cr 0.12</code></td></tr><tr><td><code>hb_se</code></td><td>TELEMETRY JUNCTION</td><td>minor</td><td>1</td><td><code>spd 0.05</code></td></tr><tr><td><code>gate_n</code></td><td>AUDIT GATE</td><td>notable</td><td>3</td><td><code>dmg 0.06, mag 0.15, xp 0.10</code></td></tr><tr><td><code>gate_e</code></td><td>THROUGHPUT GATE</td><td>notable</td><td>3</td><td><code>cdr -0.04, dmg 0.04</code></td></tr><tr><td><code>gate_s</code></td><td>SALVAGE GATE</td><td>notable</td><td>3</td><td><code>cr 0.25, luck 0.25, reroll 1.0</code></td></tr><tr><td><code>gate_w</code></td><td>MEDICAL GATE</td><td>notable</td><td>3</td><td><code>rgn 0.50, hp 15.0, lifesteal 0.04</code></td></tr><tr><td><code>ks_zerosum</code></td><td>ZERO-SUM CLAUSE</td><td>keystone</td><td>6</td><td><code>dmg 0.22, cdr -0.08, armor 0.30</code> (cond <code>crowd</code>)</td></tr></tbody></table></div>
 <h3>The REFLEX dash spur</h3>
 <p>The dash is opt-in. It hangs off the north-east hub junction as a short chain (<code>hb_ne → mob_reflex → mob_recharge → mob_twin</code>), sitting on shared ground so any frame can path to it.</p>
-<div class="tw"><table><thead><tr><th>Node</th><th>Name</th><th>Class</th><th>Cost</th><th>Effect (hooks)</th><th>Role</th></tr></thead><tbody><tr><td><code>mob_reflex</code></td><td>REFLEX DRIVE</td><td>notable</td><td>3</td><td><code>dash 1, spd 0.04</code></td><td>Grants the dash (SPACE).</td></tr><tr><td><code>mob_recharge</code></td><td>CAPACITOR VENT</td><td>minor</td><td>1</td><td><code>dashcd -0.35</code></td><td>Shorter dash recharge.</td></tr><tr><td><code>mob_twin</code></td><td>TWIN THRUSTERS</td><td>notable</td><td>3</td><td><code>dash 1, spd 0.03</code></td><td>Second dash charge.</td></tr></tbody></table></div>
+<div class="tw"><table class="wrap"><thead><tr><th>Node</th><th>Name</th><th>Class</th><th>Cost</th><th>Effect (hooks)</th><th>Role</th></tr></thead><tbody><tr><td><code>mob_reflex</code></td><td>REFLEX DRIVE</td><td>notable</td><td>3</td><td><code>dash 1, spd 0.04</code></td><td>Grants the dash (SPACE).</td></tr><tr><td><code>mob_recharge</code></td><td>CAPACITOR VENT</td><td>minor</td><td>1</td><td><code>dashcd -0.35</code></td><td>Shorter dash recharge.</td></tr><tr><td><code>mob_twin</code></td><td>TWIN THRUSTERS</td><td>notable</td><td>3</td><td><code>dash 1, spd 0.03</code></td><td>Second dash charge.</td></tr></tbody></table></div>
 <h3>The HELL unlock node</h3>
 <p>HELL is not a fill percentage — it is a single clearance node on the web.</p>
-<div class="tw"><table><thead><tr><th>Node</th><th>Name</th><th>Class</th><th>Cost</th><th>Effect (hooks)</th></tr></thead><tbody><tr><td><code>hell_key</code></td><td>BLACK ICE CLEARANCE</td><td>notable</td><td>3</td><td><code>dmg 0.06, armor 0.10, unlocks_hell: true</code></td></tr></tbody></table></div>
+<div class="tw"><table class="wrap"><thead><tr><th>Node</th><th>Name</th><th>Class</th><th>Cost</th><th>Effect (hooks)</th></tr></thead><tbody><tr><td><code>hell_key</code></td><td>BLACK ICE CLEARANCE</td><td>notable</td><td>3</td><td><code>dmg 0.06, armor 0.10, unlocks_hell: true</code></td></tr></tbody></table></div>
 <p><code>BLACK ICE CLEARANCE</code> rings all four hub junctions (<code>hell_key</code> links to <code>hb_nw</code>, <code>hb_ne</code>, <code>hb_se</code>, <code>hb_sw</code>), so every frame reaches it exactly one step past its own hub. <code>hell_unlocked()</code> loops over <code>WEB_CORES</code> and returns true if <strong>any single frame</strong> owns <code>hell_key</code> — buying it on one frame opens HELL for the whole account, and <code>difficulty_count()</code> then exposes the top difficulty tier. It is a real node too, not just a gate: the <code>dmg 0.06, armor 0.10</code> are meant to help you survive floor 1 on HELL.</p>
 <h3>Total cost and the (absent) cap</h3>
 <p><code>web_total(runner)</code> sums the cost of every node a frame can reach, skipping the <code>core_</code> roots. Because the shared lattice is a constant and every wing has the identical shape (3 minors + 3 notables + 1 keystone = <strong>18 tokens</strong>), the total is the same for all six frames:</p>
-<div class="tw"><table><thead><tr><th>Component</th><th>Tokens</th></tr></thead><tbody><tr><td>Shared lattice (buyable, excludes 6 cores)</td><td>190</td></tr><tr><td>One frame's private wing</td><td>18</td></tr><tr><td><strong><code>web_total</code> (per frame)</strong></td><td><strong>208</strong></td></tr></tbody></table></div>
-<p>There is <strong>no artificial cap</strong>: <code>web_cap(runner)</code> simply returns <code>web_total(runner)</code>. A frame can fill every node it can reach; the only limiter is the tokens it has actually earned. Signature rank is now purely a HUD badge and no longer rations allocation, and HELL is gated by the <code>hell_key</code> node rather than by web completion.</p></section>
-<section id="hell" data-acc="hl"><div class="shead"><h2>HELL Mode</h2></div>
-<p>HELL is difficulty index 3 (<code>DIFFICULTY_NAMES = ["EASY", "NORMAL", "HARD", "HELL"]</code>). It is not NORMAL with fatter numbers — it changes what the machines *do* and it is the only tier where the floors themselves fight back. Two systems combine:</p>
-<p>1. <strong>Floor quirks</strong> (<code>scripts/floor_quirk.gd</code>) — one rule per floor, the level as an opponent. These are <strong>HELL-only</strong>: <code>apply()</code> clears the quirk id unless <code>Game.quirks_live()</code> is true, and <code>quirks_live()</code> returns <code>int(settings.difficulty) &gt;= DIFFICULTY_NAMES.size() - 1</code> — i.e. difficulty 3. On every other tier the whole feature is inert (no tick, no draw, no cost). 2. <strong>Difficulty knobs</strong> (<code>scripts/game.gd</code>) — per-tier multiplier tables read once per run into <code>enemy_manager.gd</code>, plus the chaos "death spite" behaviour.</p>
-<p>Every quirk's intensity is scaled by <code>SEV = [0.85, 1.0, 1.15, 1.15]</code>, indexed by difficulty. The <strong>HELL severity is <code>SEV[3] = 1.15</code></strong> (identical to HARD's, but only HELL ever reaches it). Damage/pull/slow values below are the raw constants; multiply by <code>_sev = 1.15</code> for the effective HELL number (shown where load-bearing).</p>
-<h3>1. The Ten Floor Quirks (<code>scripts/floor_quirk.gd</code>)</h3>
-<p>Every quirk telegraphs before it hurts, runs a 12–17s cycle (or is always-on), and hits the horde with the same hazard it hits the player with. The floor announces its rule once via a HUD toast (<code>_announce_rule()</code>), ~1.8s after the floor loads.</p>
-<div class="tw"><table><thead><tr><th>#</th><th>Floor</th><th>Quirk id</th><th>In-game toast</th><th>What it does to the player</th><th>What it does to the horde</th><th>Cadence / cycle constants</th></tr></thead><tbody><tr><td>1</td><td>z01 SERVICE LEVELS</td><td><code>lanes</code></td><td>"FREIGHT LANES — the bands carry what stands on them"</td><td>Conveyor bands push the frame sideways at <code>LANE_PUSH=62</code> px/s × SEV (≈71.3), direction alternating per band</td><td>Machines on a band carried at <code>LANE_PUSH × LANE_MOB(0.55)</code> × SEV ≈ 39.2 px/s</td><td><strong>Always on</strong> (no cycle). <code>LANE_N=7</code> bands, <code>LANE_Y0=190</code>, <code>LANE_PITCH=240</code>, <code>LANE_H=64</code></td></tr><tr><td>2</td><td>z02 DROWNED GALLERIES</td><td><code>tide</code></td><td>"TIDE — high water drags on you and wakes them"</td><td>Under the front the frame is slowed up to <code>TIDE_SLOW=0.30</code> (30%) × SEV × depth; <code>TIDE_EDGE=70</code>px shallows</td><td>Submerged machines get <code>haste_left = TIDE_SURGE=0.6</code> × SEV (≈0.69s) on the 0.25s cadence</td><td><code>TIDE_CYCLE=17.0</code>s: dry <code>TIDE_LOW=6.0</code>, rise <code>TIDE_RISE=3.0</code>, high <code>TIDE_HIGH=6.5</code>, then recede</td></tr><tr><td>3</td><td>z03 CAISSON STREETS</td><td><code>lights</code></td><td>"PATROL LIGHTS — lit is tagged; step out of the beam"</td><td>Standing in a sweeping cone tags the frame (tag ramps to 1.0)</td><td>Machines sharing your lit cone get <code>haste_left ≥ 0.4</code>; ranged shave <code>0.2 × SEV</code> off their aim wait</td><td>Sweep period <code>LIT_PERIOD=10.0</code>s. <code>LIT_COLS=4 × LIT_ROWS=3 = 12</code> masts, <code>LIT_LEN=430</code>, <code>LIT_HALF=0.30</code> rad, <code>LIT_SPAN=1.15</code></td></tr><tr><td>4</td><td>z04 THE OVERBURDEN</td><td><code>rockfall</code></td><td>"ROCKFALL — the shadow is where the spoil lands"</td><td><code>RF_DMG=13</code> × SEV (≈14.95) per hit inside <code>RF_R=44</code>; then 0.45s stagger at 0.62× speed</td><td><code>RF_MOB=34</code> × SEV (≈39.1) to machines in radius, <code>slow_left ≥ 0.9</code> (underground BURROWERs immune)</td><td><code>RF_CYCLE=14.0</code>s; storm at <code>RF_STORM=9.2</code> for <code>RF_STORM_LEN=4.4</code>s; drop every <code>RF_GAP=0.62 / SEV</code>; <code>RF_TELE=1.05</code> shadow; <code>RF_MAX=8</code> rocks</td></tr><tr><td>5</td><td>z05 THERMAL TAP</td><td><code>vents</code></td><td>"VENTS — the floor blows off pressure on a count"</td><td><code>VENT_DPS=15</code> × SEV/s while on a jetting vent (<code>VENT_R=34</code>); thrown clear at <code>VENT_THROW=170</code> px/s</td><td><code>9.0 × SEV</code> per cadence tick to machines in radius; shoved 26px out</td><td><code>VENT_CYCLE=12.0</code>s per vent: <code>VENT_TELE=1.3</code> charge, <code>VENT_JET=1.65</code> jet. <code>VENT_COLS=7 × VENT_ROWS=5 = 35</code> vents, staggered <code>fposmod(k×3.71, cycle)</code></td></tr><tr><td>6</td><td>z06 BLACK SITE LETHE</td><td><code>blackout</code></td><td>"BLACKOUT — you see as far as your lamp"</td><td>Sight collapses to the lamp: base <code>BO_LAMP=118</code>, on HELL <code>× (2.0 − SEV) = ×0.85 ≈ 100.3</code>px; <code>×0.30</code> when fully out; <code>×0.55</code> on the two warning stutters</td><td>No damage/buff — machines past the lamp are drawn only as sensed outlines out to <code>BO_SENSE=250</code>px, capped at <code>SENSE_MAX=72</code></td><td><code>BO_CYCLE=13.0</code>s: <code>BO_OUT=0.9</code>s dark, <code>BO_WARN=1.5</code>s of stutter warning before</td></tr><tr><td>7</td><td>z07 CINDER FOUNDRIES</td><td><code>pour</code></td><td>"THE POUR — the channels run hot, then cool"</td><td><code>POUR_DPS=15</code> × SEV/s standing in a hot channel (<code>POUR_HALF=34</code> half-width)</td><td><code>POUR_MOB=22</code> × SEV (≈25.3) per cadence tick to machines in a hot channel</td><td><code>POUR_CYCLE=17.0</code>s: <code>POUR_TELE=3.0</code> open, <code>POUR_HOT=9.0</code> molten, <code>POUR_COOL=3.4</code> cool. <code>POUR_N=5</code> candidate channels, exactly 2 run, re-picked each cycle (lead never repeats)</td></tr><tr><td>8</td><td>z08 MANTLE SHEAR</td><td><code>shear</code></td><td>"SHEAR — the fault opens along the painted line"</td><td><code>SHEAR_DMG=22</code> × SEV (≈25.3) if on the line when it rips (<code>SHEAR_HALF=26</code> half-width)</td><td><code>SHEAR_MOB=46</code> × SEV (≈52.9); <code>slow_left ≥ 0.7</code></td><td><code>SHEAR_CYCLE=14.0</code>s: quake picks line at <code>SHEAR_QUAKE=8.4</code>, painted from <code>SHEAR_PAINT=9.2</code> until <code>SHEAR_RIP=11.0</code> (~1.8s painted), then rips</td></tr><tr><td>9</td><td>z09 THE CRUCIBLE</td><td><code>cast</code></td><td>"CASTING LINE — the moulds pour a rank at the edge"</td><td>No direct damage — spawns a formed rank of machines <code>CAST_DIST=250</code>px from the frame at the hall edge</td><td>Adds bodies: <strong>HELL pours <code>n = clampi(4 + difficulty, 5, 6) = 6</code></strong> (centre = floor elite/brawler, ends = ranged, rest = chaff), hp from <code>main._hp_scale()</code></td><td><code>CAST_CYCLE=17.0</code>s; moulds light at <code>CAST_AT=11.2</code>; <code>CAST_TELE=1.8</code>s telegraph; <code>CAST_SPACING=36</code>; <code>CAST_MAX=8</code> buffer</td></tr><tr><td>10</td><td>z10 CENTRE OF THE EARTH</td><td><code>pulse</code></td><td>"THE FIRST PROCESS — every beat pulls you in"</td><td>Each beat pulls the frame toward centre at <code>PULSE_PULL=150</code> × SEV px/s (×1.35 on heavy beat), tug lasts <code>PULSE_TUG=0.5</code>s (×1.35 heavy)</td><td>Every machine surges: <code>haste_left = 1.1</code> (normal) / <code>1.8</code> (heavy) × SEV; and is pulled to centre at <code>PULSE_PULL × PULSE_MOB(0.6)</code></td><td><code>PULSE_BEAT=4.0</code>s beat; every <code>PULSE_MEASURE=4</code>th beat is heavy (a 20s measure); <code>PULSE_WIND=1.1</code>s windup</td></tr></tbody></table></div>
-<h3>2. The HELL Difficulty Knobs (<code>scripts/game.gd</code>)</h3>
-<p>Per-tier arrays indexed by difficulty; the <strong>HELL column is index 3</strong>. Full arrays shown for context.</p>
-<div class="tw"><table><thead><tr><th>Knob</th><th>EASY</th><th>NORMAL</th><th>HARD</th><th><strong>HELL</strong></th><th>Meaning</th></tr></thead><tbody><tr><td><code>DIFF_DMG</code></td><td>0.6</td><td>1.0</td><td>1.25</td><td><strong>1.6</strong></td><td>Incoming-damage multiplier on the frame</td></tr><tr><td><code>DIFF_HP</code></td><td>0.75</td><td>1.0</td><td>1.35</td><td><strong>1.7</strong></td><td>Enemy health-curve multiplier (horde takes the full value via <code>_hp_scale()</code>)</td></tr><tr><td><code>DIFF_SUPPORT</code></td><td>0.7</td><td>1.0</td><td>1.25</td><td><strong>1.3</strong></td><td>Support machines lean harder: bigger weaver fields, larger forge broods, longer howler haste, faster tick windup</td></tr><tr><td><code>DIFF_PRESSURE</code></td><td>0.75</td><td>1.0</td><td>1.15</td><td><strong>1.3</strong></td><td>Spawn-rate (density) multiplier</td></tr><tr><td><code>DIFF_REPAIR</code></td><td>0.030</td><td>0.016</td><td>0.012</td><td><strong>0.018</strong></td><td>Repair-cell drop chance per kill (HELL forgives barely — but more than HARD)</td></tr><tr><td><code>DIFF_VOLLEY</code></td><td>1</td><td>1</td><td>3</td><td><strong>3</strong></td><td>Shots per spitter/lancer volley (odd on purpose so a shot sits on the centre line)</td></tr><tr><td><code>DIFF_SPREAD</code></td><td>0.0</td><td>0.0</td><td>0.13</td><td><strong>0.17</strong></td><td>Radians between volley shots</td></tr><tr><td><code>DIFF_SHOT_SPEED</code></td><td>0.88</td><td>1.0</td><td>1.12</td><td><strong>1.20</strong></td><td>Bolt-speed multiplier</td></tr><tr><td><code>DIFF_CHAOS</code></td><td>0</td><td>0</td><td>1</td><td><strong>2</strong></td><td>Horde behaviour tier: <code>≥1</code> = lunges (HARD+HELL), <code>≥2</code> = lunges <strong>+ death spite</strong> (HELL only)</td></tr><tr><td><code>GATE_DIFF</code></td><td>0.8</td><td>1.0</td><td>1.2</td><td><strong>1.2</strong></td><td>Gate-boss HP multiplier — its <strong>own</strong> table, NOT <code>DIFF_HP</code>, so the depth-10 gate isn't a ~175k-HP five-minute sponge</td></tr><tr><td><code>SEV</code> (quirk)</td><td>0.85</td><td>1.0</td><td>1.15</td><td><strong>1.15</strong></td><td>Floor-quirk intensity multiplier (quirks are HELL-only regardless)</td></tr></tbody></table></div>
-<h3>Chaos "death spite" (<code>scripts/enemy_manager.gd</code>)</h3>
+<div class="tw"><table class="wrap"><thead><tr><th>Component</th><th>Tokens</th></tr></thead><tbody><tr><td>Shared lattice (buyable, excludes 6 cores)</td><td>190</td></tr><tr><td>One frame's private wing</td><td>18</td></tr><tr><td><strong><code>web_total</code> (per frame)</strong></td><td><strong>208</strong></td></tr></tbody></table></div>
+<p>There is <strong>no artificial cap</strong>: <code>web_cap(runner)</code> simply returns <code>web_total(runner)</code>. A frame can fill every node it can reach; the only limiter is the tokens it has actually earned. Signature rank is now purely a HUD badge and no longer rations allocation, and HELL is gated by the <code>hell_key</code> node rather than by web completion.</p></section><section id="hell" data-acc="hl"><div class="shead"><h2>HELL Mode</h2></div><p class="note">Unlocked by BLACK ICE CLEARANCE on the web. Quirks run only on HELL.</p><h3>HELL in motion</h3><div class="clips"><figure class="clip"><img src="media/lanes.webp" alt="HELL z01 — FREIGHT LANES" loading="lazy">
+      <figcaption><b>z01 · FREIGHT LANES</b> — the belts carry what stands on them</figcaption></figure><figure class="clip"><img src="media/pour.webp" alt="HELL z07 — THE POUR" loading="lazy">
+      <figcaption><b>z07 · THE POUR</b> — the channels run hot, then cool</figcaption></figure><figure class="clip"><img src="media/cast.webp" alt="HELL z09 — CASTING LINE" loading="lazy">
+      <figcaption><b>z09 · CASTING LINE</b> — the moulds pour a formed rank</figcaption></figure></div><div class="tiles wide"><article class="tile floor">
+  <div class="ti"><img class="ic" src="icons/f_z01.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>z01 SERVICE LEVELS <span class="qz">&quot;FREIGHT LANES — the bands carry what stands on them&quot;</span></h4>
+  <p><b>You:</b> Conveyor bands push the frame sideways at LANE_PUSH=62 px/s × SEV (≈71.3), direction alternating per band</p>
+  <p><b>Them:</b> Machines on a band carried at LANE_PUSH × LANE_MOB(0.55) × SEV ≈ 39.2 px/s</p>
+  <p class="cad">Always on (no cycle). LANE_N=7 bands, LANE_Y0=190, LANE_PITCH=240, LANE_H=64</p></div>
+</article><article class="tile floor">
+  <div class="ti"><img class="ic" src="icons/f_z02.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>z02 DROWNED GALLERIES <span class="qz">&quot;TIDE — high water drags on you and wakes them&quot;</span></h4>
+  <p><b>You:</b> Under the front the frame is slowed up to TIDE_SLOW=0.30 (30%) × SEV × depth; TIDE_EDGE=70px shallows</p>
+  <p><b>Them:</b> Submerged machines get haste_left = TIDE_SURGE=0.6 × SEV (≈0.69s) on the 0.25s cadence</p>
+  <p class="cad">TIDE_CYCLE=17.0s: dry TIDE_LOW=6.0, rise TIDE_RISE=3.0, high TIDE_HIGH=6.5, then recede</p></div>
+</article><article class="tile floor">
+  <div class="ti"><img class="ic" src="icons/f_z03.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>z03 CAISSON STREETS <span class="qz">&quot;PATROL LIGHTS — lit is tagged; step out of the beam&quot;</span></h4>
+  <p><b>You:</b> Standing in a sweeping cone tags the frame (tag ramps to 1.0)</p>
+  <p><b>Them:</b> Machines sharing your lit cone get haste_left ≥ 0.4; ranged shave 0.2 × SEV off their aim wait</p>
+  <p class="cad">Sweep period LIT_PERIOD=10.0s. LIT_COLS=4 × LIT_ROWS=3 = 12 masts, LIT_LEN=430, LIT_HALF=0.30 rad, LIT_SPAN=1.15</p></div>
+</article><article class="tile floor">
+  <div class="ti"><img class="ic" src="icons/f_z04.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>z04 THE OVERBURDEN <span class="qz">&quot;ROCKFALL — the shadow is where the spoil lands&quot;</span></h4>
+  <p><b>You:</b> RF_DMG=13 × SEV (≈14.95) per hit inside RF_R=44; then 0.45s stagger at 0.62× speed</p>
+  <p><b>Them:</b> RF_MOB=34 × SEV (≈39.1) to machines in radius, slow_left ≥ 0.9 (underground BURROWERs immune)</p>
+  <p class="cad">RF_CYCLE=14.0s; storm at RF_STORM=9.2 for RF_STORM_LEN=4.4s; drop every RF_GAP=0.62 / SEV; RF_TELE=1.05 shadow; RF_MAX=8 rocks</p></div>
+</article><article class="tile floor">
+  <div class="ti"><img class="ic" src="icons/f_z05.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>z05 THERMAL TAP <span class="qz">&quot;VENTS — the floor blows off pressure on a count&quot;</span></h4>
+  <p><b>You:</b> VENT_DPS=15 × SEV/s while on a jetting vent (VENT_R=34); thrown clear at VENT_THROW=170 px/s</p>
+  <p><b>Them:</b> 9.0 × SEV per cadence tick to machines in radius; shoved 26px out</p>
+  <p class="cad">VENT_CYCLE=12.0s per vent: VENT_TELE=1.3 charge, VENT_JET=1.65 jet. VENT_COLS=7 × VENT_ROWS=5 = 35 vents, staggered fposmod(k×3.71, cycle)</p></div>
+</article><article class="tile floor">
+  <div class="ti"><img class="ic" src="icons/f_z06.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>z06 BLACK SITE LETHE <span class="qz">&quot;BLACKOUT — you see as far as your lamp&quot;</span></h4>
+  <p><b>You:</b> Sight collapses to the lamp: base BO_LAMP=118, on HELL × (2.0 − SEV) = ×0.85 ≈ 100.3px; ×0.30 when fully out; ×0.55 on the two warning stutters</p>
+  <p><b>Them:</b> No damage/buff — machines past the lamp are drawn only as sensed outlines out to BO_SENSE=250px, capped at SENSE_MAX=72</p>
+  <p class="cad">BO_CYCLE=13.0s: BO_OUT=0.9s dark, BO_WARN=1.5s of stutter warning before</p></div>
+</article><article class="tile floor">
+  <div class="ti"><img class="ic" src="icons/f_z07.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>z07 CINDER FOUNDRIES <span class="qz">&quot;THE POUR — the channels run hot, then cool&quot;</span></h4>
+  <p><b>You:</b> POUR_DPS=15 × SEV/s standing in a hot channel (POUR_HALF=34 half-width)</p>
+  <p><b>Them:</b> POUR_MOB=22 × SEV (≈25.3) per cadence tick to machines in a hot channel</p>
+  <p class="cad">POUR_CYCLE=17.0s: POUR_TELE=3.0 open, POUR_HOT=9.0 molten, POUR_COOL=3.4 cool. POUR_N=5 candidate channels, exactly 2 run, re-picked each cycle (lead never repeats)</p></div>
+</article><article class="tile floor">
+  <div class="ti"><img class="ic" src="icons/f_z08.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>z08 MANTLE SHEAR <span class="qz">&quot;SHEAR — the fault opens along the painted line&quot;</span></h4>
+  <p><b>You:</b> SHEAR_DMG=22 × SEV (≈25.3) if on the line when it rips (SHEAR_HALF=26 half-width)</p>
+  <p><b>Them:</b> SHEAR_MOB=46 × SEV (≈52.9); slow_left ≥ 0.7</p>
+  <p class="cad">SHEAR_CYCLE=14.0s: quake picks line at SHEAR_QUAKE=8.4, painted from SHEAR_PAINT=9.2 until SHEAR_RIP=11.0 (~1.8s painted), then rips</p></div>
+</article><article class="tile floor">
+  <div class="ti"><img class="ic" src="icons/f_z09.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>z09 THE CRUCIBLE <span class="qz">&quot;CASTING LINE — the moulds pour a rank at the edge&quot;</span></h4>
+  <p><b>You:</b> No direct damage — spawns a formed rank of machines CAST_DIST=250px from the frame at the hall edge</p>
+  <p><b>Them:</b> Adds bodies: HELL pours n = clampi(4 + difficulty, 5, 6) = 6 (centre = floor elite/brawler, ends = ranged, rest = chaff), hp from main._hp_scale()</p>
+  <p class="cad">CAST_CYCLE=17.0s; moulds light at CAST_AT=11.2; CAST_TELE=1.8s telegraph; CAST_SPACING=36; CAST_MAX=8 buffer</p></div>
+</article><article class="tile floor">
+  <div class="ti"><img class="ic" src="icons/f_z10.png" alt="" loading="lazy"></div>
+  <div class="tc"><h4>z10 CENTRE OF THE EARTH <span class="qz">&quot;THE FIRST PROCESS — every beat pulls you in&quot;</span></h4>
+  <p><b>You:</b> Each beat pulls the frame toward centre at PULSE_PULL=150 × SEV px/s (×1.35 on heavy beat), tug lasts PULSE_TUG=0.5s (×1.35 heavy)</p>
+  <p><b>Them:</b> Every machine surges: haste_left = 1.1 (normal) / 1.8 (heavy) × SEV; and is pulled to centre at PULSE_PULL × PULSE_MOB(0.6)</p>
+  <p class="cad">PULSE_BEAT=4.0s beat; every PULSE_MEASURE=4th beat is heavy (a 20s measure); PULSE_WIND=1.1s windup</p></div>
+</article></div><h3>HELL difficulty column</h3><div class="tw"><table class="wrap"><thead><tr><th>Knob</th><th>EASY</th><th>NORMAL</th><th>HARD</th><th><strong>HELL</strong></th><th>Meaning</th></tr></thead><tbody><tr><td><code>DIFF_DMG</code></td><td>0.6</td><td>1.0</td><td>1.25</td><td><strong>1.6</strong></td><td>Incoming-damage multiplier on the frame</td></tr><tr><td><code>DIFF_HP</code></td><td>0.75</td><td>1.0</td><td>1.35</td><td><strong>1.7</strong></td><td>Enemy health-curve multiplier (horde takes the full value via <code>_hp_scale()</code>)</td></tr><tr><td><code>DIFF_SUPPORT</code></td><td>0.7</td><td>1.0</td><td>1.25</td><td><strong>1.3</strong></td><td>Support machines lean harder: bigger weaver fields, larger forge broods, longer howler haste, faster tick windup</td></tr><tr><td><code>DIFF_PRESSURE</code></td><td>0.75</td><td>1.0</td><td>1.15</td><td><strong>1.3</strong></td><td>Spawn-rate (density) multiplier</td></tr><tr><td><code>DIFF_REPAIR</code></td><td>0.030</td><td>0.016</td><td>0.012</td><td><strong>0.018</strong></td><td>Repair-cell drop chance per kill (HELL forgives barely — but more than HARD)</td></tr><tr><td><code>DIFF_VOLLEY</code></td><td>1</td><td>1</td><td>3</td><td><strong>3</strong></td><td>Shots per spitter/lancer volley (odd on purpose so a shot sits on the centre line)</td></tr><tr><td><code>DIFF_SPREAD</code></td><td>0.0</td><td>0.0</td><td>0.13</td><td><strong>0.17</strong></td><td>Radians between volley shots</td></tr><tr><td><code>DIFF_SHOT_SPEED</code></td><td>0.88</td><td>1.0</td><td>1.12</td><td><strong>1.20</strong></td><td>Bolt-speed multiplier</td></tr><tr><td><code>DIFF_CHAOS</code></td><td>0</td><td>0</td><td>1</td><td><strong>2</strong></td><td>Horde behaviour tier: <code>≥1</code> = lunges (HARD+HELL), <code>≥2</code> = lunges <strong>+ death spite</strong> (HELL only)</td></tr><tr><td><code>GATE_DIFF</code></td><td>0.8</td><td>1.0</td><td>1.2</td><td><strong>1.2</strong></td><td>Gate-boss HP multiplier — its <strong>own</strong> table, NOT <code>DIFF_HP</code>, so the depth-10 gate isn't a ~175k-HP five-minute sponge</td></tr><tr><td><code>SEV</code> (quirk)</td><td>0.85</td><td>1.0</td><td>1.15</td><td><strong>1.15</strong></td><td>Floor-quirk intensity multiplier (quirks are HELL-only regardless)</td></tr></tbody></table></div><h3>Chaos "death spite" (<code>scripts/enemy_manager.gd</code>)</h3>
 <p><code>_chaos</code> is resolved once per run in <code>_refresh_difficulty()</code> from <code>DIFF_CHAOS</code>, so on HELL <code>_chaos = 2</code>. Two behaviours key off it:</p>
 <ul><li><strong>Lunge</strong> (<code>_chaos &gt;= 1</code>, so HARD + HELL): a machine within <code>dist &lt; 96.0</code>px of the frame closes 1.45× faster (<code>mv *= 1.45</code>), so kiting stops being a free answer.</li><li><strong>Death spite</strong> (<code>_chaos &gt;= 2</code>, <strong>HELL only</strong>, ~line 2813): when any machine dies *except* <code>T_OVERLORD</code> and <code>T_SAPPER</code>, and the enemy-shot pool has room (<code>_shots.count &lt; MAX_SHOTS(768) − 8</code>), there is a <strong>15% chance</strong> (<code>randf() &lt; 0.15</code>) it fires a parting volley through <code>_fan()</code> toward the player — dir = <code>(_player.position - pos[i]).normalized()</code>, speed <strong>190</strong>, bolt scale <strong>0.8</strong>, colour = the machine's type colour, damage = <code>EnemyShots.DMG(9.0) × 0.5 = 4.5</code> per bolt. Because it routes through <code>_fan()</code>, on HELL it is a <strong>3-shot fan</strong> (<code>DIFF_VOLLEY=3</code>) at <strong>0.17 rad</strong> spread, and the bolts inherit <code>DIFF_SHOT_SPEED=1.20</code> (190 × 1.20 = 228 effective). Clearing a pack at point-blank still costs you something — at 15%, "punished, not forbidden".</li></ul></section></main></div>
 <script>
