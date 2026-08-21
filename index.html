@@ -6,6 +6,7 @@
 <meta name="description" content="MACHINE DESCENT field manual — how to play plus an icon reference for frames, weapons, fusions, passives, relics, the skill web and HELL mode.">
 <meta name="color-scheme" content="dark light">
 <title>MACHINE DESCENT Field Manual</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Chakra+Petch:wght@500;600&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#eef1f6; --panel:#ffffff; --panel2:#f5f7fb; --line:#d9e0ea;
@@ -247,6 +248,57 @@ section h3{margin-top:26px}
 /* keep prose tables from touching the section edges */
 #web h3, #hell h3{margin-top:28px}
 </style>
+<style>
+/* ============ CYBERPUNK LAYER ============ */
+/* Display type: Orbitron for the wordmark + section headers, Chakra Petch for
+   nav/labels; data stays monospace (terminal readout). All fall back to the
+   system stack if the webfont is blocked, so the page never breaks. */
+.hud .brand{font-family:'Orbitron',ui-monospace,monospace; font-weight:800; letter-spacing:.2em}
+.hud .brand b{color:var(--cy); text-shadow:0 0 12px color-mix(in srgb,var(--cy) 60%,transparent)}
+.hero .kick{font-family:'Chakra Petch',ui-monospace,monospace}
+.hero h1{font-family:'Orbitron',system-ui,sans-serif; font-weight:900; letter-spacing:.015em}
+.hero h1 .n{text-shadow:0 0 34px color-mix(in srgb,var(--cy) 55%,transparent),
+  0 0 6px color-mix(in srgb,var(--cy) 75%,transparent)}
+section h2{font-family:'Orbitron',ui-monospace,monospace; font-weight:800; letter-spacing:.1em;
+  text-shadow:0 0 16px color-mix(in srgb,var(--acc) 40%,transparent)}
+.shead::before{box-shadow:0 0 14px -1px var(--acc), 0 0 4px var(--acc)}
+.rail a{font-family:'Chakra Petch',ui-monospace,monospace; letter-spacing:.05em; font-size:13px}
+.rail a.active{box-shadow:inset 2px 0 0 var(--acc)}
+.rail a.active i{box-shadow:0 0 10px var(--acc)}
+.cta{font-family:'Chakra Petch',ui-monospace,monospace; font-weight:600; letter-spacing:.05em}
+
+/* Page ground: theme background + a faint tech-grid and a cyan bloom up top. */
+body{
+  background-color:var(--bg);
+  background-image:
+    radial-gradient(120% 70% at 50% -8%, color-mix(in srgb,var(--cy) 9%, transparent), transparent 55%),
+    linear-gradient(color-mix(in srgb,var(--line) 30%,transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb,var(--line) 30%,transparent) 1px, transparent 1px);
+  background-size:auto, 46px 46px, 46px 46px;
+  background-position:center top, center top, center top;
+  background-attachment:fixed, fixed, fixed;
+}
+
+/* CRT scanlines — static, subtle, never intercept clicks. */
+body::after{content:""; position:fixed; inset:0; z-index:60; pointer-events:none;
+  background:repeating-linear-gradient(to bottom, rgba(0,0,0,0) 0 2px, rgba(0,0,0,.05) 3px);
+  mix-blend-mode:multiply; opacity:.55}
+
+/* neon rim on the hero clip */
+.heroclip{box-shadow:0 0 0 1px var(--line), 0 0 42px -12px color-mix(in srgb,var(--cy) 45%,transparent)}
+
+/* ============ humanized hook chips (relics, in plain language) ============ */
+.hooks{display:flex; flex-wrap:wrap; gap:6px; margin-top:2px; align-items:center}
+.hk{font-family:ui-monospace,Menlo,monospace; font-size:11px; letter-spacing:.02em; padding:3px 8px;
+  border-radius:6px; white-space:nowrap; font-variant-numeric:tabular-nums; color:var(--ink);
+  background:color-mix(in srgb,var(--cy) 13%,transparent);
+  border:1px solid color-mix(in srgb,var(--cy) 34%,transparent)}
+.hk.cost{color:#ff9c9c; background:color-mix(in srgb,#ff5a5a 12%,transparent);
+  border-color:color-mix(in srgb,#ff5a5a 42%,transparent)}
+.hk.none{white-space:normal; color:var(--mut); background:var(--panel2); border-color:var(--line)}
+.home{font-family:ui-monospace,Menlo,monospace; font-size:10px; letter-spacing:.08em; color:var(--faint);
+  text-transform:uppercase; margin-left:2px}
+</style>
 
 </head>
 <body>
@@ -330,7 +382,7 @@ section h3{margin-top:26px}
     <figure><img src="shot-foundry.png" alt="Cinder Foundries — floor seven, lava channels"><figcaption>z07 · CINDER FOUNDRIES — the channels run hot, then cool</figcaption></figure>
     <figure><img src="shot-boss.png" alt="A gate Warden mid-fight"><figcaption>A gate Warden — the floor is the fight</figcaption></figure>
   </div>
-</section><section id="frames" data-acc="cy"><div class="shead"><h2>Playable Frames</h2></div><p class="note">Six hijacked war-frames, each a fixed signature weapon and its own integrity/speed/damage profile.</p><div class="tiles"><article class="tile">
+</section><section id="frames" data-acc="cy"><div class="shead"><h2>Playable Frames</h2></div><p class="note">Pick a frame before each run. It sets your starting weapon and your survivability &amp;mdash; more integrity means more room for mistakes. Tougher frames cost credits to unlock.</p><div class="tiles"><article class="tile">
   <div class="ti"><img class="ic" src="icons/w_0.png" alt="" loading="lazy"></div>
   <div class="tc"><h4>SCYTHE <span class="sub">assault frame</span></h4>
   <div class="st"><span class="s"><b>HP</b>100.0</span><span class="s"><b>SPD</b>1.0× (115.0 px/s)</span><span class="s"><b>DMG</b>1.0×</span><span class="s"><b>RGN</b>0.5 /s</span></div>
@@ -360,7 +412,7 @@ section h3{margin-top:26px}
   <div class="tc"><h4>THE COURIER <span class="sub">&quot;the ghost, as she was&quot;</span></h4>
   <div class="st"><span class="s"><b>HP</b>85.0</span><span class="s"><b>SPD</b>1.1× (126.5 px/s)</span><span class="s"><b>DMG</b>1.05×</span><span class="s"><b>RGN</b>0.3 /s</span></div>
   <p>Signature: <strong>ICEBREAKER</strong> · core <code>core_courier</code> · unlock <strong>0 (requires byte achievement)</strong></p></div>
-</article></div></section><section id="weapons" data-acc="am"><div class="shead"><h2>Weapons</h2></div><p class="note">Twenty base weapons — they auto-fire; you position. +30% damage and ~7% faster per level.</p><div class="tiles"><article class="tile">
+</article></div></section><section id="weapons" data-acc="am"><div class="shead"><h2>Weapons</h2></div><p class="note">Your guns fire on their own &amp;mdash; your job is to move. Each weapon levels up during a run (about +30% damage and slightly faster fire per level). You can carry four at once, so every pick is a commitment.</p><div class="tiles"><article class="tile">
   <div class="ti"><img class="ic" src="icons/w_0.png" alt="" loading="lazy"></div>
   <div class="tc"><h4>RIPPER SMG</h4>
   <div class="st"><span class="s"><b>CD</b>0.45s</span><span class="s"><b>DMG</b>8.0</span></div>
@@ -460,7 +512,7 @@ section h3{margin-top:26px}
   <div class="tc"><h4>DEADEYE MARKER</h4>
   <div class="st"><span class="s"><b>CD</b>3.4s</span><span class="s"><b>DMG</b>70.0</span></div>
   <p>Marks the toughest machine for orbital deletion. radius 34.0. Bystanders take half; mark rides target until the lance falls.</p></div>
-</article></div></section><section id="fusions" data-acc="vi"><div class="shead"><h2>Fusions</h2></div><p class="note">Level two matching weapons and the level-up panel offers the fusion — one stronger weapon in place of the pair.</p><div class="tiles wide"><article class="tile fus">
+</article></div></section><section id="fusions" data-acc="vi"><div class="shead"><h2>Fusions</h2></div><p class="note">Carry two matching weapons, both levelled up, and the level-up screen offers to FUSE them &amp;mdash; the pair becomes one much stronger weapon in a single slot.</p><div class="tiles wide"><article class="tile fus">
   <div class="recipe"><img class="ic sm" src="icons/w_1.png" alt="" loading="lazy"><span class="wn">RAILGUN</span><span class="op">+</span>
     <img class="ic sm" src="icons/w_8.png" alt="" loading="lazy"><span class="wn">SPECTRAL LANCE</span><span class="op arr">&rarr;</span>
     <img class="ic" src="icons/w_20.png" alt="" loading="lazy"><span class="wn res">NOVA LANCE</span></div>
@@ -530,175 +582,175 @@ section h3{margin-top:26px}
     <img class="ic sm" src="icons/w_18.png" alt="" loading="lazy"><span class="wn">CRYO JET</span><span class="op arr">&rarr;</span>
     <img class="ic" src="icons/w_33.png" alt="" loading="lazy"><span class="wn res">BEDLAM</span></div>
   <p>thermal shock, alternating arc and freeze pulses</p><p class="stats"><code>interval 0.85, dmg 13.0, radius 110.0</code></p>
-</article></div></section><section id="passives" data-acc="mg"><div class="shead"><h2>Passives</h2></div><p class="note">Stat augments offered on level-up, each up to rank 5.</p><div class="tiles"><article class="tile">
+</article></div></section><section id="passives" data-acc="mg"><div class="shead"><h2>Passives</h2></div><p class="note">Simple stat boosts offered on level-up. Each stacks up to five times.</p><div class="tiles"><article class="tile">
   <div class="ti"><img class="ic" src="icons/p_dmg.png" alt="" loading="lazy"></div>
-  <div class="tc"><h4>COMBAT STIMS <span class="sub">+15% all damage</span></h4>
-  <p>base_damage_mult = 1.15</p></div>
+  <div class="tc"><h4>COMBAT STIMS</h4>
+  <p>+15% all damage</p></div>
 </article><article class="tile">
   <div class="ti"><img class="ic" src="icons/p_cdr.png" alt="" loading="lazy"></div>
-  <div class="tc"><h4>REFLEX BOOSTER <span class="sub">+10% attack speed</span></h4>
-  <p>base_cooldown_mult = 0.90</p></div>
+  <div class="tc"><h4>REFLEX BOOSTER</h4>
+  <p>+10% attack speed</p></div>
 </article><article class="tile">
   <div class="ti"><img class="ic" src="icons/p_spd.png" alt="" loading="lazy"></div>
-  <div class="tc"><h4>SERVO LEGS <span class="sub">+10% move speed</span></h4>
-  <p>_player.speed_mult += 0.10</p></div>
+  <div class="tc"><h4>SERVO LEGS</h4>
+  <p>+10% move speed</p></div>
 </article><article class="tile">
   <div class="ti"><img class="ic" src="icons/p_hp.png" alt="" loading="lazy"></div>
-  <div class="tc"><h4>SUBDERMAL PLATING <span class="sub">+25 max integrity, restore 25</span></h4>
-  <p>_player.max_hp += 25.0; then hp = min(hp + 25.0, max_hp)</p></div>
+  <div class="tc"><h4>SUBDERMAL PLATING</h4>
+  <p>+25 max integrity, restore 25</p></div>
 </article><article class="tile">
   <div class="ti"><img class="ic" src="icons/p_mag.png" alt="" loading="lazy"></div>
-  <div class="tc"><h4>COLLECTOR FIELD <span class="sub">+30% pickup radius</span></h4>
-  <p>_player.pickup_radius = 1.3</p></div>
+  <div class="tc"><h4>COLLECTOR FIELD</h4>
+  <p>+30% pickup radius</p></div>
 </article><article class="tile">
   <div class="ti"><img class="ic" src="icons/p_rgn.png" alt="" loading="lazy"></div>
-  <div class="tc"><h4>NANITE REPAIR <span class="sub">+0.6 integrity/sec</span></h4>
-  <p>_player.regen += 0.6</p></div>
+  <div class="tc"><h4>NANITE REPAIR</h4>
+  <p>+0.6 integrity/sec</p></div>
 </article><article class="tile">
   <div class="ti"><img class="ic" src="icons/p_area.png" alt="" loading="lazy"></div>
-  <div class="tc"><h4>BLAST AMPLIFIER <span class="sub">+10% projectile size and blast radius</span></h4>
-  <p>area multiplier = 1.0 + 0.10  rank</p></div>
+  <div class="tc"><h4>BLAST AMPLIFIER</h4>
+  <p>+10% projectile size and blast radius</p></div>
 </article><article class="tile">
   <div class="ti"><img class="ic" src="icons/p_pierce.png" alt="" loading="lazy"></div>
-  <div class="tc"><h4>PENETRATOR ROUNDS <span class="sub">+1 pierce every 2 ranks</span></h4>
-  <p>bonus = 1 + rank / 2 (integer div) → ranks 1/2/3/4/5 give +1/+2/+2/+3/+3</p></div>
+  <div class="tc"><h4>PENETRATOR ROUNDS</h4>
+  <p>+1 pierce every 2 ranks</p></div>
 </article><article class="tile">
   <div class="ti"><img class="ic" src="icons/p_echo.png" alt="" loading="lazy"></div>
-  <div class="tc"><h4>ECHO CACHE <span class="sub">8% chance any volley fires twice</span></h4>
-  <p>volley re-fires if randf() &lt; 0.08  rank (8%/16%/24%/32%/40%)</p></div>
+  <div class="tc"><h4>ECHO CACHE</h4>
+  <p>8% chance any volley fires twice</p></div>
 </article><article class="tile">
   <div class="ti"><img class="ic" src="icons/p_dur.png" alt="" loading="lazy"></div>
-  <div class="tc"><h4>STASIS CAPACITOR <span class="sub">+12% effect durations</span></h4>
-  <p>duration multiplier = 1.0 + 0.12  rank</p></div>
+  <div class="tc"><h4>STASIS CAPACITOR</h4>
+  <p>+12% effect durations</p></div>
 </article><article class="tile">
   <div class="ti"><img class="ic" src="icons/p_greed.png" alt="" loading="lazy"></div>
-  <div class="tc"><h4>SCRAP MAGNET <span class="sub">+10% credits</span></h4>
-  <p>credits = 1.0 + 0.10  rank</p></div>
+  <div class="tc"><h4>SCRAP MAGNET</h4>
+  <p>+10% credits</p></div>
 </article><article class="tile">
   <div class="ti"><img class="ic" src="icons/p_armor.png" alt="" loading="lazy"></div>
-  <div class="tc"><h4>ABLATIVE FOAM <span class="sub">-5% damage taken</span></h4>
-  <p>incoming_mult = 1.0 - 0.05  rank (5 ranks = -25%, not compounding)</p></div>
+  <div class="tc"><h4>ABLATIVE FOAM</h4>
+  <p>-5% damage taken</p></div>
 </article><article class="tile">
   <div class="ti"><img class="ic" src="icons/p_thorns.png" alt="" loading="lazy"></div>
-  <div class="tc"><h4>REACTIVE PLATING <span class="sub">contact attackers take 6 dmg/s</span></h4>
-  <p>_player.thorns = 6.0  rank (6/12/18/24/30 dmg/s)</p></div>
+  <div class="tc"><h4>REACTIVE PLATING</h4>
+  <p>contact attackers take 6 dmg/s</p></div>
 </article><article class="tile">
   <div class="ti"><img class="ic" src="icons/p_xp.png" alt="" loading="lazy"></div>
-  <div class="tc"><h4>NEURAL SIPHON <span class="sub">+8% XP</span></h4>
-  <p>XP gain = 1.0 + 0.08  rank</p></div>
-</article></div></section><section id="relics" data-acc="am2"><div class="shead"><h2>Relics &amp; Items</h2></div><p class="note">Salvage bolted onto the frame between runs. COMMON · MILSPEC · BLACK ICE.</p><div class="tiles"><article class="tile" data-tier="0">
+  <div class="tc"><h4>NEURAL SIPHON</h4>
+  <p>+8% XP</p></div>
+</article></div></section><section id="relics" data-acc="am2"><div class="shead"><h2>Relics &amp; Items</h2></div><p class="note">Permanent gear you equip between runs. Rarer relics hit harder but often carry a downside &amp;mdash; watch the red numbers. Rarity climbs COMMON &amp;rarr; MILSPEC &amp;rarr; BLACK ICE.</p><div class="tiles"><article class="tile" data-tier="0">
   <div class="ti"><img class="ic" src="icons/r_chip.png" alt="" loading="lazy"></div>
   <div class="tc"><h4>CRACKED TARGETING CHIP <span class="tier t0">COMMON</span></h4>
-  <p><code>{&quot;dmg&quot;: 0.07}</code></p></div>
+  <div class="hooks"><span class="hk ">+7% damage</span></div></div>
 </article><article class="tile" data-tier="0">
   <div class="ti"><img class="ic" src="icons/r_coolant.png" alt="" loading="lazy"></div>
   <div class="tc"><h4>FRAYED COOLANT LINE <span class="tier t0">COMMON</span></h4>
-  <p><code>{&quot;cdr&quot;: -0.05}</code></p></div>
+  <div class="hooks"><span class="hk ">+5% attack speed</span></div></div>
 </article><article class="tile" data-tier="0">
   <div class="ti"><img class="ic" src="icons/r_rivet.png" alt="" loading="lazy"></div>
   <div class="tc"><h4>LUCKY RIVET <span class="tier t0">COMMON</span></h4>
-  <p><code>{&quot;luck&quot;: 0.06}</code></p></div>
+  <div class="hooks"><span class="hk ">+6% luck</span></div></div>
 </article><article class="tile" data-tier="0">
   <div class="ti"><img class="ic" src="icons/r_coil.png" alt="" loading="lazy"></div>
   <div class="tc"><h4>SALVAGED MAGNET COIL <span class="tier t0">COMMON</span></h4>
-  <p><code>{&quot;mag&quot;: 0.20}</code></p></div>
+  <div class="hooks"><span class="hk ">+20% pickup range</span></div></div>
 </article><article class="tile" data-tier="0">
   <div class="ti"><img class="ic" src="icons/r_plating.png" alt="" loading="lazy"></div>
   <div class="tc"><h4>SCAVENGED PLATING <span class="tier t0">COMMON</span></h4>
-  <p><code>{&quot;hp&quot;: 18.0}</code></p></div>
+  <div class="hooks"><span class="hk ">+18 max integrity</span></div></div>
 </article><article class="tile" data-tier="0">
   <div class="ti"><img class="ic" src="icons/r_servo.png" alt="" loading="lazy"></div>
   <div class="tc"><h4>SPARE SERVO <span class="tier t0">COMMON</span></h4>
-  <p><code>{&quot;spd&quot;: 0.05}</code></p></div>
+  <div class="hooks"><span class="hk ">+5% move speed</span></div></div>
 </article><article class="tile" data-tier="1">
   <div class="ti"><img class="ic" src="icons/r_weave.png" alt="" loading="lazy"></div>
   <div class="tc"><h4>CERAMIC WEAVE <span class="tier t1">MILSPEC</span></h4>
-  <p><code>{&quot;armor&quot;: -0.12, &quot;dmg&quot;: -0.06}</code></p></div>
+  <div class="hooks"><span class="hk ">−12% damage taken</span><span class="hk cost">−6% damage</span></div></div>
 </article><article class="tile" data-tier="1">
   <div class="ti"><img class="ic" src="icons/r_slug.png" alt="" loading="lazy"></div>
   <div class="tc"><h4>CORE SAMPLE SLUG <span class="tier t1">MILSPEC</span></h4>
-  <p><code>{&quot;luck&quot;: 0.12}</code></p></div>
+  <div class="hooks"><span class="hk ">+12% luck</span></div></div>
 </article><article class="tile" data-tier="1">
   <div class="ti"><img class="ic" src="icons/r_symbols.png" alt="" loading="lazy"></div>
   <div class="tc"><h4>DEBUG SYMBOLS <span class="tier t1">MILSPEC</span></h4>
-  <p><code>{&quot;reroll&quot;: 2.0}</code></p></div>
+  <div class="hooks"><span class="hk ">+2 reroll</span></div></div>
 </article><article class="tile" data-tier="1">
   <div class="ti"><img class="ic" src="icons/r_bladder.png" alt="" loading="lazy"></div>
   <div class="tc"><h4>DREDGE BLADDER <span class="tier t1">MILSPEC</span></h4>
-  <p><code>{&quot;hp&quot;: 25.0, &quot;rgn&quot;: 0.2}</code></p></div>
+  <div class="hooks"><span class="hk ">+25 max integrity</span><span class="hk ">+0.2 self-repair/s</span></div></div>
 </article><article class="tile" data-tier="1">
   <div class="ti"><img class="ic" src="icons/r_hook.png" alt="" loading="lazy"></div>
   <div class="tc"><h4>GRAVE ROBBER&#x27;S HOOK <span class="tier t1">MILSPEC</span></h4>
-  <p><code>{&quot;luck&quot;: 0.15, &quot;mag&quot;: 0.12, &quot;xp&quot;: -0.10}</code></p></div>
+  <div class="hooks"><span class="hk ">+15% luck</span><span class="hk ">+12% pickup range</span><span class="hk cost">−10% XP gain</span></div></div>
 </article><article class="tile" data-tier="1">
   <div class="ti"><img class="ic" src="icons/r_trigger.png" alt="" loading="lazy"></div>
   <div class="tc"><h4>HAIR TRIGGER <span class="tier t1">MILSPEC</span></h4>
-  <p><code>{&quot;cdr&quot;: -0.18, &quot;dmg&quot;: -0.15}</code></p></div>
+  <div class="hooks"><span class="hk ">+18% attack speed</span><span class="hk cost">−15% damage</span></div></div>
 </article><article class="tile" data-tier="1">
   <div class="ti"><img class="ic" src="icons/r_stamp.png" alt="" loading="lazy"></div>
   <div class="tc"><h4>MANIFEST STAMP <span class="tier t1">MILSPEC</span></h4>
-  <p><code>{&quot;cr&quot;: 0.10}</code></p></div>
+  <div class="hooks"><span class="hk ">+10% credits</span></div></div>
 </article><article class="tile" data-tier="1">
   <div class="ti"><img class="ic" src="icons/r_onyx.png" alt="" loading="lazy"></div>
   <div class="tc"><h4>ONYX ROUND SET <span class="tier t1">MILSPEC</span></h4>
-  <p><code>{&quot;dmg&quot;: 0.18, &quot;spd&quot;: -0.08}</code></p></div>
+  <div class="hooks"><span class="hk ">+18% damage</span><span class="hk cost">−8% move speed</span></div></div>
 </article><article class="tile" data-tier="1">
   <div class="ti"><img class="ic" src="icons/r_governor.png" alt="" loading="lazy"></div>
   <div class="tc"><h4>OVERCLOCK GOVERNOR <span class="tier t1">MILSPEC</span></h4>
-  <p><code>{&quot;cdr&quot;: -0.12, &quot;hp&quot;: -12.0}</code></p></div>
+  <div class="hooks"><span class="hk ">+12% attack speed</span><span class="hk cost">−12 max integrity</span></div></div>
 </article><article class="tile" data-tier="1">
   <div class="ti"><img class="ic" src="icons/r_preload.png" alt="" loading="lazy"></div>
   <div class="tc"><h4>PRELOAD CARTRIDGE <span class="tier t1">MILSPEC</span></h4>
-  <p><code>{&quot;level&quot;: 2.0}</code></p></div>
+  <div class="hooks"><span class="hk ">+2 start level</span></div></div>
 </article><article class="tile" data-tier="1">
   <div class="ti"><img class="ic" src="icons/r_lens.png" alt="" loading="lazy"></div>
   <div class="tc"><h4>SODIUM LENS <span class="tier t1">MILSPEC</span></h4>
-  <p><code>{&quot;dmg&quot;: 0.08, &quot;mag&quot;: 0.10}</code></p></div>
+  <div class="hooks"><span class="hk ">+8% damage</span><span class="hk ">+10% pickup range</span></div></div>
 </article><article class="tile" data-tier="1">
   <div class="ti"><img class="ic" src="icons/r_vampire.png" alt="" loading="lazy"></div>
   <div class="tc"><h4>VAMPIRE BUS <span class="tier t1">MILSPEC</span></h4>
-  <p><code>{&quot;rgn&quot;: 0.8, &quot;dmg&quot;: -0.10}</code></p></div>
+  <div class="hooks"><span class="hk ">+0.8 self-repair/s</span><span class="hk cost">−10% damage</span></div></div>
 </article><article class="tile" data-tier="2">
   <div class="ti"><img class="ic" src="icons/r_sprue.png" alt="" loading="lazy"></div>
   <div class="tc"><h4>CASTING SPRUE <span class="tier t2">BLACK ICE</span></h4>
-  <p><code>{&quot;dmg&quot;: 0.12, &quot;armor&quot;: 0.04}</code></p></div>
+  <div class="hooks"><span class="hk ">+12% damage</span><span class="hk cost">+4% damage taken</span></div></div>
 </article><article class="tile" data-tier="2">
   <div class="ti"><img class="ic" src="icons/r_ballast.png" alt="" loading="lazy"></div>
   <div class="tc"><h4>GHOST BALLAST <span class="tier t2">BLACK ICE</span></h4>
-  <p><code>{&quot;hp&quot;: 60.0, &quot;spd&quot;: -0.18, &quot;cdr&quot;: -0.10}</code></p></div>
+  <div class="hooks"><span class="hk ">+60 max integrity</span><span class="hk cost">−18% move speed</span><span class="hk ">+10% attack speed</span></div></div>
 </article><article class="tile" data-tier="2">
   <div class="ti"><img class="ic" src="icons/r_glass.png" alt="" loading="lazy"></div>
   <div class="tc"><h4>GLASS GHOST <span class="tier t2">BLACK ICE</span></h4>
-  <p><code>{&quot;dmg&quot;: 0.45, &quot;hp_mult&quot;: -0.55}</code></p></div>
+  <div class="hooks"><span class="hk ">+45% damage</span><span class="hk cost">−55% max integrity</span></div></div>
 </article><article class="tile" data-tier="2">
   <div class="ti"><img class="ic" src="icons/r_seal.png" alt="" loading="lazy"></div>
   <div class="tc"><h4>GOVERNOR&#x27;S SEAL <span class="tier t2">BLACK ICE</span></h4>
-  <p><code>{&quot;cdr&quot;: -0.08}</code></p></div>
+  <div class="hooks"><span class="hk ">+8% attack speed</span></div></div>
 </article><article class="tile" data-tier="2">
   <div class="ti"><img class="ic" src="icons/r_index.png" alt="" loading="lazy"></div>
   <div class="tc"><h4>LETHE INDEX <span class="tier t2">BLACK ICE</span></h4>
-  <p><code>{&quot;xp&quot;: 0.12}</code></p></div>
+  <div class="hooks"><span class="hk ">+12% XP gain</span></div></div>
 </article><article class="tile" data-tier="2">
   <div class="ti"><img class="ic" src="icons/r_keel.png" alt="" loading="lazy"></div>
   <div class="tc"><h4>MANTLE KEEL <span class="tier t2">BLACK ICE</span></h4>
-  <p><code>{&quot;armor&quot;: -0.10, &quot;spd&quot;: -0.03}</code></p></div>
+  <div class="hooks"><span class="hk ">−10% damage taken</span><span class="hk cost">−3% move speed</span></div></div>
 </article><article class="tile" data-tier="2">
   <div class="ti"><img class="ic" src="icons/r_backup.png" alt="" loading="lazy"></div>
   <div class="tc"><h4>MOTHER&#x27;S BACKUP <span class="tier t2">BLACK ICE</span></h4>
-  <p><code>{&quot;grant&quot;: &quot;deadman&quot;}</code></p></div>
+  <div class="hooks"><span class="hk ">grants DEADMAN</span></div></div>
 </article><article class="tile" data-tier="2">
   <div class="ti"><img class="ic" src="icons/r_coin.png" alt="" loading="lazy"></div>
   <div class="tc"><h4>PROOF COIN <span class="tier t2">BLACK ICE</span></h4>
-  <p><code>{&quot;reroll&quot;: 1.0, &quot;luck&quot;: 0.08}</code></p></div>
+  <div class="hooks"><span class="hk ">+1 reroll</span><span class="hk ">+8% luck</span></div></div>
 </article><article class="tile" data-tier="2">
   <div class="ti"><img class="ic" src="icons/r_debt.png" alt="" loading="lazy"></div>
   <div class="tc"><h4>THE COURIER&#x27;S DEBT <span class="tier t2">BLACK ICE</span></h4>
-  <p><code>{&quot;cr&quot;: 0.30, &quot;luck&quot;: 0.30, &quot;armor&quot;: 0.20}</code></p></div>
+  <div class="hooks"><span class="hk ">+30% credits</span><span class="hk ">+30% luck</span><span class="hk cost">+20% damage taken</span></div></div>
 </article><article class="tile" data-tier="2">
   <div class="ti"><img class="ic" src="icons/r_instruction.png" alt="" loading="lazy"></div>
   <div class="tc"><h4>THE FIRST INSTRUCTION <span class="tier t2">BLACK ICE</span></h4>
-  <p><code>{&quot;level&quot;: 1.0, &quot;sdmg&quot;: 0.10}</code></p></div>
-</article></div></section><section id="web" data-acc="cy2"><div class="shead"><h2>The Skill Web</h2></div><p>MACHINE DESCENT does not give each frame its own skill tree. Instead there is <strong>one shared lattice</strong> — a single large web of nodes that every frame can path through — plus a <strong>private "wing" bolted onto each frame's core</strong>. In <code>scripts/game.gd</code>, the whole board lives in the <code>SKILL_WEB</code> constant (nodes), <code>WEB_LINKS</code> (edges), and <code>WEB_CORES</code> (which node is which frame's root). There are <strong>115 nodes</strong> in total: <strong>73 shared</strong> (including the 6 cores) and <strong>42 wing nodes</strong> (6 wings × 7 nodes each).</p>
+  <div class="hooks"><span class="hk ">+1 start level</span><span class="hk ">+10% sig. damage</span></div></div>
+</article></div></section><section id="web" data-acc="cy2"><div class="shead"><h2>The Skill Web</h2></div><p class="note">Between runs you spend earned tokens here for permanent upgrades. It is one shared web every frame draws from, plus a private wing per frame; the big hexagonal KEYSTONES are build-defining.</p><p>MACHINE DESCENT does not give each frame its own skill tree. Instead there is <strong>one shared lattice</strong> — a single large web of nodes that every frame can path through — plus a <strong>private "wing" bolted onto each frame's core</strong>. In <code>scripts/game.gd</code>, the whole board lives in the <code>SKILL_WEB</code> constant (nodes), <code>WEB_LINKS</code> (edges), and <code>WEB_CORES</code> (which node is which frame's root). There are <strong>115 nodes</strong> in total: <strong>73 shared</strong> (including the 6 cores) and <strong>42 wing nodes</strong> (6 wings × 7 nodes each).</p>
 <h3>Frames and trees</h3>
 <p>There are <strong>6 frames</strong>, one per entry in <code>WEB_CORES</code>. Each has a free, pre-owned root node (cost 0) that anchors it to the lattice:</p>
 <div class="tw"><table class="wrap"><thead><tr><th>Frame key</th><th>Core node id</th><th>Core name</th></tr></thead><tbody><tr><td><code>scythe</code></td><td><code>core_scythe</code></td><td>SCYTHE // ATTRITION CORE</td></tr><tr><td><code>bulwark</code></td><td><code>core_bulwark</code></td><td>BULWARK // EMPLACEMENT CORE</td></tr><tr><td><code>havoc</code></td><td><code>core_havoc</code></td><td>HAVOC // ORDNANCE CORE</td></tr><tr><td><code>vector</code></td><td><code>core_vector</code></td><td>VECTOR // PURSUIT CORE</td></tr><tr><td><code>tempest</code></td><td><code>core_tempest</code></td><td>TEMPEST // VELOCITY CORE</td></tr><tr><td><code>courier</code></td><td><code>core_courier</code></td><td>COURIER // LOGISTICS CORE</td></tr></tbody></table></div>
@@ -727,7 +779,7 @@ section h3{margin-top:26px}
 <h3>Total cost and the (absent) cap</h3>
 <p><code>web_total(runner)</code> sums the cost of every node a frame can reach, skipping the <code>core_</code> roots. Because the shared lattice is a constant and every wing has the identical shape (3 minors + 3 notables + 1 keystone = <strong>18 tokens</strong>), the total is the same for all six frames:</p>
 <div class="tw"><table class="wrap"><thead><tr><th>Component</th><th>Tokens</th></tr></thead><tbody><tr><td>Shared lattice (buyable, excludes 6 cores)</td><td>190</td></tr><tr><td>One frame's private wing</td><td>18</td></tr><tr><td><strong><code>web_total</code> (per frame)</strong></td><td><strong>208</strong></td></tr></tbody></table></div>
-<p>There is <strong>no artificial cap</strong>: <code>web_cap(runner)</code> simply returns <code>web_total(runner)</code>. A frame can fill every node it can reach; the only limiter is the tokens it has actually earned. Signature rank is now purely a HUD badge and no longer rations allocation, and HELL is gated by the <code>hell_key</code> node rather than by web completion.</p></section><section id="hell" data-acc="hl"><div class="shead"><h2>HELL Mode</h2></div><p class="note">Unlocked by BLACK ICE CLEARANCE on the web. Quirks run only on HELL.</p><h3>HELL in motion</h3><div class="clips"><figure class="clip"><img src="media/lanes.webp" alt="HELL z01 — FREIGHT LANES" loading="lazy">
+<p>There is <strong>no artificial cap</strong>: <code>web_cap(runner)</code> simply returns <code>web_total(runner)</code>. A frame can fill every node it can reach; the only limiter is the tokens it has actually earned. Signature rank is now purely a HUD badge and no longer rations allocation, and HELL is gated by the <code>hell_key</code> node rather than by web completion.</p></section><section id="hell" data-acc="hl"><div class="shead"><h2>HELL Mode</h2></div><p class="note">The hardest tier, unlocked by buying BLACK ICE CLEARANCE on the skill web. On top of tougher numbers, every one of the ten floors runs its own live mechanic &amp;mdash; watch the clips below.</p><h3>HELL in motion</h3><div class="clips"><figure class="clip"><img src="media/lanes.webp" alt="HELL z01 — FREIGHT LANES" loading="lazy">
       <figcaption><b>z01 · FREIGHT LANES</b> — the belts carry what stands on them</figcaption></figure><figure class="clip"><img src="media/pour.webp" alt="HELL z07 — THE POUR" loading="lazy">
       <figcaption><b>z07 · THE POUR</b> — the channels run hot, then cool</figcaption></figure><figure class="clip"><img src="media/cast.webp" alt="HELL z09 — CASTING LINE" loading="lazy">
       <figcaption><b>z09 · CASTING LINE</b> — the moulds pour a formed rank</figcaption></figure></div><div class="tiles wide"><article class="tile floor">
